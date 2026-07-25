@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DFD New Energy — International Expansion Strategy Deck</title>
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+:root{--bg:#fff;--ink:#1a2b36;--muted:#5c6b78;--faint:#8894a0;--line:#e3edf4;--volt:#024d80;--copper:#0380d6;--sky:#9accef;--ok:#2f8f5b;--warn:#c9791f;--bg2:#f3f9fc;--bg3:#e7f2fa;}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#0a1a26;overflow:hidden;}
+.deck{height:100vh;width:100vw;position:relative;}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:6vh 8vw;background:var(--bg);opacity:0;transition:opacity .4s ease;overflow-y:auto;}
+.slide.active{display:flex;opacity:1;}
+.slide.dark{background:linear-gradient(155deg,#04324f,#02202f);color:#eaf3fa;}
+.slide.tint{background:linear-gradient(155deg,var(--bg3),var(--bg2));}
+.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--copper);margin-bottom:18px;}
+.slide.dark .eyebrow{color:var(--sky);}
+h1{font-size:clamp(2rem,5vw,4rem);line-height:1.08;letter-spacing:-.02em;color:var(--volt);margin-bottom:20px;font-weight:700;}
+.slide.dark h1{color:#fff;}
+h2{font-size:clamp(1.6rem,3.4vw,2.6rem);line-height:1.15;letter-spacing:-.015em;color:var(--volt);margin-bottom:22px;font-weight:700;}
+.slide.dark h2{color:#fff;}
+h1 em,h2 em{font-style:normal;color:var(--copper);}
+.slide.dark h1 em,.slide.dark h2 em{color:var(--sky);}
+p.lead{font-size:clamp(1.05rem,1.8vw,1.5rem);color:var(--muted);max-width:60ch;line-height:1.5;}
+.slide.dark p.lead{color:#b9d2e4;}
+.kicker{font-size:1.05rem;color:var(--muted);max-width:62ch;margin-bottom:8px;}
+ul.pts{list-style:none;margin-top:26px;max-width:64ch;}
+ul.pts li{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line);font-size:clamp(1rem,1.5vw,1.25rem);}
+.slide.dark ul.pts li{border-color:rgba(255,255,255,.12);color:#dbe9f4;}
+ul.pts li .ic{flex-shrink:0;width:30px;height:30px;border-radius:7px;background:var(--bg3);display:flex;align-items:center;justify-content:center;color:var(--copper);}
+.slide.dark ul.pts li .ic{background:rgba(255,255,255,.1);color:var(--sky);}
+ul.pts li .ic svg{width:16px;height:16px;}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:34px;}
+@media(max-width:820px){.stats{grid-template-columns:repeat(2,1fr);}}
+.stat .n{font-size:clamp(1.8rem,3.6vw,3rem);font-weight:700;color:var(--copper);letter-spacing:-.02em;}
+.slide.dark .stat .n{color:var(--sky);}
+.stat .l{font-size:.9rem;color:var(--muted);margin-top:4px;}
+.slide.dark .stat .l{color:#a9c4d6;}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:26px;}
+@media(max-width:820px){.cols{grid-template-columns:1fr;}}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:24px;}
+.slide.dark .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);}
+.card h3{font-size:1.15rem;color:var(--volt);margin-bottom:10px;display:flex;align-items:center;gap:10px;}
+.slide.dark .card h3{color:#fff;}
+.card p{font-size:.95rem;color:var(--muted);}
+.slide.dark .card p{color:#c3d8e6;}
+.tag{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;padding:5px 12px;border-radius:100px;background:var(--bg3);color:var(--volt);margin:4px 6px 0 0;}
+.slide.dark .tag{background:rgba(255,255,255,.12);color:#eaf3fa;}
+.tag.ok{background:rgba(47,143,91,.14);color:var(--ok);}
+.tag.warn{background:rgba(201,121,31,.14);color:var(--warn);}
+table.mkt{width:100%;border-collapse:collapse;margin-top:24px;font-size:clamp(.85rem,1.2vw,1.02rem);}
+table.mkt th,table.mkt td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;}
+table.mkt th{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);}
+table.mkt td b{color:var(--volt);}
+.rowtag{font-weight:700;}
+.rowtag.a{color:var(--ok);}.rowtag.b{color:var(--copper);}.rowtag.x{color:#c0392b;}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px;}
+@media(max-width:820px){.timeline{grid-template-columns:1fr 1fr;}}
+.tl{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:18px;}
+.tl .wk{font-size:.72rem;font-weight:700;color:var(--copper);text-transform:uppercase;letter-spacing:.05em;}
+.tl h4{font-size:1rem;color:var(--volt);margin:8px 0 6px;}
+.tl p{font-size:.85rem;color:var(--muted);}
+.big-quote{font-size:clamp(1.5rem,3.2vw,2.6rem);line-height:1.25;color:var(--volt);font-weight:700;letter-spacing:-.01em;max-width:20ch;}
+.slide.dark .big-quote{color:#fff;}
+.hero-num{font-size:clamp(3rem,9vw,7rem);font-weight:800;color:var(--copper);line-height:1;letter-spacing:-.03em;}
+.slide.dark .hero-num{color:var(--sky);}
+/* chrome */
+.nav{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:100px;padding:8px 16px;z-index:50;box-shadow:0 6px 24px rgba(0,0,0,.12);}
+.nav button{background:none;border:none;cursor:pointer;color:var(--volt);display:flex;padding:4px;border-radius:50%;}
+.nav button:hover{background:var(--bg3);}
+.nav .count{font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums;min-width:44px;text-align:center;}
+.dots{position:fixed;top:0;left:0;height:3px;background:var(--copper);z-index:50;transition:width .3s ease;}
+.brandmark{position:fixed;top:22px;left:8vw;display:flex;align-items:center;gap:9px;font-weight:700;color:var(--volt);z-index:40;font-size:.95rem;}
+.slide.active.dark ~ .brandmark{color:#fff;}
+.brandmark .m{width:26px;height:26px;border-radius:6px;background:linear-gradient(135deg,var(--copper),var(--volt));display:flex;align-items:center;justify-content:center;}
+.brandmark .m svg{width:15px;height:15px;color:#fff;}
+.foot-note{position:absolute;bottom:5vh;left:8vw;font-size:.76rem;color:var(--faint);}
+.slide.dark .foot-note{color:#7fa0b5;}
+kbd{font-family:monospace;background:var(--bg3);padding:1px 6px;border-radius:4px;font-size:.8rem;}
+</style>
+</head>
+<body>
+<div class="dots" id="dots"></div>
+<div class="brandmark"><span class="m"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 11-13h-7l1-7z"/></svg></span> DFD New Energy</div>
+
+<div class="deck" id="deck">
+
+  <!-- 1 title -->
+  <section class="slide dark active">
+    <div class="eyebrow">International Expansion Strategy · 2026</div>
+    <h1>Turning a great factory into a <em>global brand buyers trust.</em></h1>
+    <p class="lead">How DFD New Energy wins B2B sales outside China — and pulls the leads and margin back from the resellers.</p>
+    <div class="stats" style="margin-top:44px;">
+      <div class="stat"><div class="n">¥1.66B</div><div class="l">Registered capital</div></div>
+      <div class="stat"><div class="n">8.5 GWh</div><div class="l">Cell capacity</div></div>
+      <div class="stat"><div class="n">300k+</div><div class="l">Vehicles on the road</div></div>
+      <div class="stat"><div class="n">SZ002407</div><div class="l">Listed parent</div></div>
+    </div>
+    <div class="foot-note">Use <kbd>→</kbd> / <kbd>←</kbd> or swipe to navigate</div>
+  </section>
+
+  <!-- 2 problem -->
+  <section class="slide">
+    <div class="eyebrow">The problem</div>
+    <h2>Right now, the <em>reseller</em> is the brand.</h2>
+    <p class="lead">Alibaba and Made-in-China listings outrank dfdxny.com. So the lead, the margin, and the customer relationship all leak to middlemen — for a product DFD actually makes.</p>
+    <ul class="pts">
+      <li><span class="ic"><i data-lucide="search-x"></i></span>Almost every discoverable spec, MOQ and price lives on a <b>reseller's</b> listing, not DFD's own domain.</li>
+      <li><span class="ic"><i data-lucide="trending-down"></i></span>The demand exists and is being <b>captured by intermediaries</b> — a revenue leak, not a vanity branding gap.</li>
+      <li><span class="ic"><i data-lucide="user-x"></i></span>Buyers never build a relationship with DFD — they build it with the trader who can service them.</li>
+    </ul>
+  </section>
+
+  <!-- 3 who -->
+  <section class="slide tint">
+    <div class="eyebrow">Who DFD actually is</div>
+    <h2>A listed-parent-backed manufacturer — not a trading house.</h2>
+    <div class="cols">
+      <div class="card"><h3><i data-lucide="building-2" style="width:18px;color:var(--copper);"></i> Scale &amp; backing</h3><p>Subsidiary of Do-Fluoride New Materials (SZ002407). 22+ subsidiaries, 7,000+ staff, 8.5 GWh across Jiaozuo &amp; Nanning. ~1 in 4 of the world's lithium batteries use the parent's materials.</p></div>
+      <div class="card"><h3><i data-lucide="badge-check" style="width:18px;color:var(--copper);"></i> Proven &amp; certified</h3><p>UL1973 · UL1642 · IEC62619 · UN38.3 + GB standards. 300,000+ vehicles with SAIC-GM, Chery, NETA. 623 authorised patents. Overseas bases in Indonesia &amp; Bolivia.</p></div>
+    </div>
+    <p class="kicker" style="margin-top:24px;">None of this is currently legible to an international buyer. <b>That is the whole opportunity.</b></p>
+  </section>
+
+  <!-- 4 insight -->
+  <section class="slide dark">
+    <div class="eyebrow">The core insight</div>
+    <h2>B2B battery buyers don't buy amp-hours.<br>They buy <em>risk transfer.</em></h2>
+    <p class="lead">A procurement engineer is buying a warranty that's still honourable in 2034, supply security, and a supplier name their own risk committee can defend without getting fired.</p>
+    <ul class="pts">
+      <li><span class="ic"><i data-lucide="copy"></i></span>A reseller can copy the public cert and the spec sheet.</li>
+      <li><span class="ic"><i data-lucide="shield"></i></span>A reseller <b>cannot</b> originate a bankable warranty, put a listed balance sheet behind it, or prove batch-level traceability.</li>
+      <li><span class="ic"><i data-lucide="key"></i></span>That gap is DFD's entire moat — the website's job is to make it <b>legible and provable.</b></li>
+    </ul>
+  </section>
+
+  <!-- 5 market map -->
+  <section class="slide">
+    <div class="eyebrow">Tariff-adjusted market map</div>
+    <h2>Where DFD can actually sell <em>profitably.</em></h2>
+    <table class="mkt">
+      <tr><th>Track</th><th>Market</th><th>Why</th><th>Trade reality</th></tr>
+      <tr><td><span class="rowtag a">NOW</span></td><td><b>US/EU via non-China origin</b></td><td>Displaced buyers hunting compliant, defensible supply</td><td>82% US tariff is <b>origin-based</b> — Indonesia sidesteps it</td></tr>
+      <tr><td><span class="rowtag a">NOW</span></td><td><b>Southeast Asia</b></td><td>Huge e-two-wheeler + residential ESS volume</td><td>Open; price-led → use for throughput</td></tr>
+      <tr><td><span class="rowtag b">BUILD</span></td><td><b>Middle East &amp; Africa</b></td><td>$2.85B→$6.9B by '31; Saudi 48GWh, Egypt 4GW</td><td>Won via EPC + local warranty — 12–24 mo</td></tr>
+      <tr><td><span class="rowtag b">BUILD</span></td><td><b>Europe</b></td><td>Cell imports up ~7×; EV tariffs don't hit cells</td><td>Barrier is <b>Battery Passport</b>, not tariff</td></tr>
+      <tr><td><span class="rowtag x">HOLD</span></td><td>US (China-origin direct)</td><td>Demand exists but uncompetitive landed cost</td><td>~82% tariff — serve via non-China origin only</td></tr>
+    </table>
+  </section>
+
+  <!-- 6 origin weapon -->
+  <section class="slide tint">
+    <div class="eyebrow">The under-priced weapon</div>
+    <h2>Indonesia &amp; Bolivia aren't a tariff-dodge.<br>They're a <em>premium SKU.</em></h2>
+    <div class="cols">
+      <div>
+        <p class="kicker">"Non-Chinese-origin LFP at Chinese-parent quality and scale" is a category that <b>barely exists yet</b> — and Western + Gulf buyers are actively hunting for it for political cover, even where tariffs don't force it.</p>
+        <div style="margin-top:20px;">
+          <span class="tag ok"><i data-lucide="check" style="width:13px;"></i> Neutralises the 82% US tariff</span>
+          <span class="tag ok"><i data-lucide="check" style="width:13px;"></i> Political cover for Gulf/EU tenders</span>
+          <span class="tag ok"><i data-lucide="check" style="width:13px;"></i> No reseller can offer it</span>
+        </div>
+      </div>
+      <div class="card"><h3><i data-lucide="map-pin" style="width:18px;color:var(--copper);"></i> The pitch line</h3><p style="font-size:1.1rem;color:var(--ink);font-weight:600;">"Made in Indonesia, engineered by an 8.5 GWh certified parent."</p><p style="margin-top:10px;">Command better pricing than resellers precisely because resellers can't offer origin certainty.</p></div>
+    </div>
+  </section>
+
+  <!-- 7 two-track -->
+  <section class="slide dark">
+    <div class="eyebrow">The strategy · validated by LLM council</div>
+    <h2>Two tracks, run in parallel.</h2>
+    <div class="cols">
+      <div class="card"><h3><i data-lucide="rocket" style="width:18px;color:var(--sky);"></i> Track A — revenue now (0–6 mo)</h3><p>Cold outreach + trade shows to tariff-displaced US/EU integrators, led by the <b>non-China-origin</b> wedge. SEA e-two-wheeler + residential ESS volume in parallel. Produces real RFQs in 90 days.</p></div>
+      <div class="card"><h3><i data-lucide="castle" style="width:18px;color:var(--sky);"></i> Track B — the moat (6–24 mo)</h3><p><b>EU Battery-Passport-ready</b> traceability → bid-qualifying before rivals. MEA distributor/EPC relationships + a regional warranty entity so the mandate deals become winnable.</p></div>
+    </div>
+    <p class="kicker" style="color:#b9d2e4;margin-top:22px;">Fix trust-legibility <b>before</b> spending a dollar on traffic.</p>
+  </section>
+
+  <!-- 8 website = data room -->
+  <section class="slide">
+    <div class="eyebrow">The owned channel</div>
+    <h2>The website is a <em>data room</em>, not a brochure.</h2>
+    <p class="lead">Its job is to convert the high-intent buyers already checking DFD out — and to become the answer AI engines cite.</p>
+    <ul class="pts">
+      <li><span class="ic"><i data-lucide="file-check-2"></i></span><b>Verifiable proof:</b> certs mapped to batches, factory-audit video, parent-backed warranty, named references.</li>
+      <li><span class="ic"><i data-lucide="bot"></i></span><b>GEO / AIO:</b> structured fact-blocks + schema so ChatGPT &amp; Perplexity cite DFD — not a reseller — for "who makes this cell."</li>
+      <li><span class="ic"><i data-lucide="smartphone"></i></span><b>Mobile-first, multilingual</b> (EN/AR/DE/VI), Core-Web-Vitals-tuned, RFQ with a 4-hour response SLA.</li>
+    </ul>
+  </section>
+
+  <!-- 9 channel mix -->
+  <section class="slide tint">
+    <div class="eyebrow">Channel mix — each channel, one job</div>
+    <h2>The website compounds. Outreach pays the bills now.</h2>
+    <div class="cols">
+      <div class="card"><h3><i data-lucide="globe" style="width:18px;color:var(--copper);"></i> Owned site</h3><p>Data room + GEO/AIO citation layer. Compounding asset. Not the 90-day engine.</p></div>
+      <div class="card"><h3><i data-lucide="send" style="width:18px;color:var(--copper);"></i> Cold outreach + trade shows</h3><p>The near-term revenue engine. RFQs in 30–90 days from displaced integrators.</p></div>
+      <div class="card"><h3><i data-lucide="store" style="width:18px;color:var(--copper);"></i> Alibaba</h3><p>Keep as trust-scaffold &amp; discovery. Route qualified buyers to direct. Don't depend on it.</p></div>
+      <div class="card"><h3><i data-lucide="handshake" style="width:18px;color:var(--copper);"></i> Distributors</h3><p>The MEA + in-region warranty unlock. Start now, revenue in 6–18 mo.</p></div>
+    </div>
+  </section>
+
+  <!-- 10 90-day -->
+  <section class="slide">
+    <div class="eyebrow">The 90-day sequence</div>
+    <h2>What happens Monday morning.</h2>
+    <div class="timeline">
+      <div class="tl"><div class="wk">Weeks 1–2</div><h4>Build the trust layer</h4><p>Certs, datasheets, factory footage → verify in under 2 min. Data-room pages live. RFQ + 4-hr SLA.</p></div>
+      <div class="tl"><div class="wk">Weeks 2–4</div><h4>Light the engine</h4><p>150–200 target integrators. Cold outreach led by the non-China-origin one-pager. Book Intersolar/RE+.</p></div>
+      <div class="tl"><div class="wk">Weeks 4–12</div><h4>Convert + compound</h4><p>Respond within SLA → samples → POs. Ship first GEO fact-block + FAQ content.</p></div>
+      <div class="tl"><div class="wk">Parallel</div><h4>Seed Track B</h4><p>Open MEA distributor talks. Scope the EU passport data layer.</p></div>
+    </div>
+  </section>
+
+  <!-- 11 the one thing -->
+  <section class="slide dark">
+    <div class="eyebrow">The #1 thing that must be true</div>
+    <p class="big-quote">DFD must become the <em>verifiable, contractable entity</em> — not just a better-ranked website.</p>
+    <p class="lead" style="margin-top:24px;">Certs mapped to batches · factory video · parent-backed warranty · a credible path to in-region service. Without it, a better website just does the reseller's lead-gen for free.</p>
+  </section>
+
+  <!-- 12 KPIs -->
+  <section class="slide tint">
+    <div class="eyebrow">How we'll know it's working</div>
+    <h2>Leading signals, not vanity metrics.</h2>
+    <div class="stats">
+      <div class="stat"><div class="n">15–30</div><div class="l">Qualified RFQs / 90 days</div></div>
+      <div class="stat"><div class="n">≤4 hrs</div><div class="l">RFQ response time, 100%</div></div>
+      <div class="stat"><div class="n">≥3</div><div class="l">Sample orders → POs</div></div>
+      <div class="stat"><div class="n">Mo 3–4</div><div class="l">First AI-engine citations</div></div>
+    </div>
+    <p class="kicker" style="margin-top:28px;">Ignore early: raw traffic, head-term rankings, Alibaba impressions. They don't equal RFQs.</p>
+  </section>
+
+  <!-- 13 close -->
+  <section class="slide dark">
+    <div class="eyebrow">Do this first</div>
+    <h1>Build the <em>trust layer.</em><br>Then drive the traffic.</h1>
+    <p class="lead">The verifiable cert library, factory video, parent-financial proof and named warranty terms are the credibility gate resellers can't fake — the precondition for every channel and every citation.</p>
+    <div style="margin-top:30px;">
+      <span class="tag"><i data-lucide="mail" style="width:14px;"></i> xnysales@dfdchem.com</span>
+      <span class="tag"><i data-lucide="phone" style="width:14px;"></i> +86-0391-2956003</span>
+      <span class="tag"><i data-lucide="message-circle" style="width:14px;"></i> WhatsApp inquiries</span>
+    </div>
+  </section>
+
+</div>
+
+<div class="nav">
+  <button id="prev" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
+  <span class="count" id="count">1 / 13</span>
+  <button id="next" aria-label="Next"><i data-lucide="chevron-right"></i></button>
+</div>
+
+<script>
+lucide.createIcons();
+const slides=[...document.querySelectorAll('.slide')];
+let i=0;
+const dots=document.getElementById('dots');const count=document.getElementById('count');
+function show(n){
+  i=Math.max(0,Math.min(slides.length-1,n));
+  slides.forEach((s,x)=>s.classList.toggle('active',x===i));
+  dots.style.width=((i+1)/slides.length*100)+'%';
+  count.textContent=(i+1)+' / '+slides.length;
+}
+document.getElementById('next').onclick=()=>show(i+1);
+document.getElementById('prev').onclick=()=>show(i-1);
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();show(i+1);}
+  if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();show(i-1);}
+  if(e.key==='Home')show(0); if(e.key==='End')show(slides.length-1);
+});
+let sx=0;
+addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)show(dx<0?i+1:i-1);},{passive:true});
+show(0);
+</script>
+</body>
+</html>
