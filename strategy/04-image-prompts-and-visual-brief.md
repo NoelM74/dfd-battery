@@ -106,6 +106,73 @@ clean, techy-but-corporate infographic style in #024D80 and #0380D6. No readable
 ```
 Alt text: "EU Battery Passport digital traceability concept for DFD cells."
 
+## 2b. GPT Image-1 (ChatGPT) prompts — calibrated to the live site palette
+
+These are written for **ChatGPT's image generator (gpt-image-1)** and tuned to drop straight into the built site's containers and colours. The live palette is: background near-black **#07121D / #0A1826**, deep navy **#0B2136**, electric blue **#1E7FE0 / #3B9EFF**, glow blue **#5AB0FF**, energy amber **#F6A93B**, on a dark theme. Where a slot sits in a dark section, ask for a **dark navy background that matches #0B2136** so the image blends edge-to-edge; where a `float-stat` chip overlays the bottom-left corner, ask for **negative space / darker area in the lower-left**.
+
+### PRIORITY 1 — E-motorcycle battery pack (industries.html · "E-two-wheeler" slot, 4:3)
+> Currently a branded placeholder with a bike icon — replace with this.
+```
+A premium product photograph of a modern electric-motorcycle lithium battery pack:
+a sleek matte-black rectangular pack with subtle electric-blue (#3B9EFF) accent lines,
+visible cooling fins and a heavy-duty industrial connector on top. The pack sits at a
+three-quarter angle, sharply lit with cool studio lighting and a soft blue rim light.
+Background is a smooth dark navy gradient (#0B2136 to #07121D) that fills the frame edge
+to edge — no white, no seams. Keep the lower-left third darker and emptier for a text
+overlay. Faint out-of-focus silhouette of an electric scooter in the deep background.
+Photorealistic, clean, high-end industrial, 4:3, no text or logos.
+```
+Alt: "DFD e-motorcycle lithium battery pack, 361X–723X platform."
+
+### PRIORITY 2 — Containerised C&I energy-storage system (industries.html · "Storage" slot & products ESS, 4:3)
+> Currently a placeholder with a container icon — replace with this.
+```
+A photorealistic outdoor commercial battery energy-storage system: a matte white-and-navy
+steel container/cabinet with ventilation louvres and a subtle electric-blue (#1E7FE0) light
+strip along one edge, installed on a concrete pad. A row of solar panels sits softly out of
+focus behind it under a deep blue twilight sky. Cool cinematic lighting with a faint blue
+glow. The overall colour grade is dark and premium, dominated by navy (#0B2136) and blue so
+it blends into a dark website section. Lower-left kept darker for a stat overlay.
+Photorealistic, no text, no logos, 4:3.
+```
+Alt: "DFD containerised C&I BESS in a solar-plus-storage project."
+
+### OPTIONAL — Alternative hero cell render (if replacing the real photo, full-bleed 16:9)
+```
+A dramatic hero product render of a single large-format cylindrical LiFePO4 battery cell
+standing upright, deep-blue anodized metal casing with a bright specular highlight down one
+edge and a glowing electric-blue (#3B9EFF) ring of light around the base. The cell is
+positioned on the RIGHT third of a wide frame; the left two-thirds is a dark navy tech
+environment (#07121D to #0B2136) with faint horizontal light streaks and a subtle grid,
+leaving clean dark space for headline text. Cinematic, premium, energy-tech aesthetic.
+16:9, no text, no logos.
+```
+Alt: "DFD large-format cylindrical LFP power cell, hero render."
+
+### OPTIONAL — Factory / production-line (data-room & origin sections, 16:9)
+```
+A clean documentary photograph looking down a modern battery-cell production line: precise
+automated machinery and a robotic arm in soft focus, spotless epoxy floor, cool
+daylight-balanced lighting with subtle teal-blue equipment accents. Conveys scale,
+cleanliness and quality control. Colour graded toward navy (#0B2136) and electric blue so it
+sits naturally in a dark section. Negative space upper-right for an overlay badge. No visible
+national flags, no text. Photorealistic, 16:9.
+```
+Alt: "DFD automated cell production line — quality-controlled manufacturing."
+
+### OPTIONAL — EU Battery Passport concept (Europe / compliance, 16:9)
+```
+A minimalist conceptual illustration of a digital battery passport: a stylised cylindrical
+cell connected by thin glowing electric-blue (#3B9EFF) lines to floating data nodes
+(carbon-footprint, provenance and recyclability icons) and a QR-style glyph. Set on a dark
+navy gradient background (#0B2136 to #07121D) with a faint technical grid. Modern, clean,
+corporate-tech infographic style using only navy, electric blue and white. No readable text.
+16:9.
+```
+Alt: "EU Battery Passport digital-traceability concept for DFD cells."
+
+**Workflow:** generate at the largest size ChatGPT offers, export, compress to AVIF/WebP, and drop into `website/assets/img/` using the descriptive file name in each alt line. In `industries.html`, swap the `<div class="split-media media-ph ...">` placeholder back to `<div class="split-media ..."><img src="assets/img/FILENAME" alt="ALT"></div>`.
+
 ## 3. Iconography & diagrams
 - Keep line-icon set consistent (the prototype uses Lucide). Weight 1.5–2px, colour `#0380D6` on `#E7F2FA` chips.
 - The hero cell SVG in the prototype is a good lightweight placeholder; replace with prompt 2.1 render + prompt 2.5 cutaway for production.
