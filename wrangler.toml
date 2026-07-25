@@ -1,7 +1,7 @@
 # Cloudflare Workers — static assets deployment for the DFD New Energy site.
 # Serves the multi-page website in ./website at the root URL "/".
 # Deploy with:  npx wrangler deploy
-name = "dfd-battery"
+name = "dfd-deck"
 compatibility_date = "2025-01-01"
 
 [assets]
