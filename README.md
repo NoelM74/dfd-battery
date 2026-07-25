@@ -18,14 +18,19 @@ strategy/
   council/
     council-report-20260725.html   ← LLM council pressure-test (open in browser)
     council-transcript-20260725.md
-website/
-  index.html                       ← working website prototype (data-room-first, mobile-optimised)
+website/                           ← full multi-page site (premium "listed-manufacturer" design)
+  index.html                       ← Home — hero, bento products, direct-vs-reseller, data room
+  products.html                    ← Products — cell series, packs & ESS with spec tables
+  industries.html                  ← Industries — problem→solution→proof per buyer segment
+  company.html                     ← Company dossier — parent backing, capacity, certifications
+  contact.html                     ← Request a quote (RFQ) with 4-hour SLA
+  assets/styles.css · assets/app.js
 deck/
   index.html                       ← strategy slide deck (arrow keys / swipe to navigate)
 ```
 
 ## How to view the demos
-- **Website:** open `website/index.html` in any browser (mobile + desktop responsive).
+- **Website:** open `website/index.html` and click through Products → Industries → Company → Contact (mobile + desktop responsive; premium 2026 design system).
 - **Slide deck:** open `deck/index.html`; navigate with `→` / `←`, space, or swipe.
 - **Council verdict:** open `strategy/council/council-report-20260725.html`.
 

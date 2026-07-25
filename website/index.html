@@ -3,697 +3,322 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cylindrical LFP Cells &amp; Battery Systems for Global OEMs — DFD New Energy</title>
-<meta name="description" content="DFD New Energy manufactures large-format cylindrical LiFePO4 cells, EV/e-motorcycle packs, and ESS systems — backed by listed parent Do-Fluoride Chemicals. Direct export to MEA, Europe, Southeast Asia.">
+<title>DFD New Energy — Large-Format LFP Cells, Packs & Storage Systems | Direct from the Manufacturer</title>
+<meta name="description" content="DFD New Energy builds large-format cylindrical LiFePO4 cells, EV & e-motorcycle packs and energy-storage systems — backed by Shenzhen-listed Do-Fluoride (SZ002407). 8.5 GWh capacity, UL1973/IEC62619/UN38.3 certified, 300,000+ vehicles on the road. Buy direct.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest"></script>
-<style>
-:root{
-  --bg:#FFFFFF; --bg-2:#F3F9FC; --bg-3:#E7F2FA;
-  --line:rgba(2,77,128,0.12); --line-strong:rgba(2,77,128,0.22);
-  --ink:#333333; --ink-muted:#5C6B78; --ink-faint:#78868F;
-  --copper:#0380D6; --copper-bright:#2C97E8;
-  --volt:#024D80; --volt-bright:#04649F;
-  --olive:#9ACCEF;
-  --ok:#2F8F5B;
-  --r-sm:3px; --r-md:6px; --r-lg:10px; --r-xl:14px;
-  --ease:cubic-bezier(0.16,1,0.3,1);
-}
-*{box-sizing:border-box; margin:0; padding:0;}
-html{scroll-behavior:smooth;}
-body{
-  background:var(--bg); color:var(--ink);
-  font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif;
-  line-height:1.6; -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-::selection{background:var(--copper); color:#FFFFFF;}
-a{color:inherit; text-decoration:none;}
-img{max-width:100%; display:block;}
-.mono{font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif;}
-.disp{font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif;}
-.wrap{max-width:1280px; margin:0 auto; padding:0 32px;}
-@media (max-width:640px){.wrap{padding:0 20px;}}
-
-/* texture */
-.grain{position:relative;}
-.grain::before{content:none;}
-
-/* nav */
-.nav{
-  position:fixed; top:0; left:0; right:0; z-index:200;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:18px 32px;
-  background:rgba(255,255,255,0.75); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--line);
-  transition:background 300ms var(--ease), padding 300ms var(--ease), box-shadow 300ms var(--ease);
-}
-.nav.scrolled{background:rgba(255,255,255,0.96); padding:13px 32px; box-shadow:0 1px 12px rgba(2,77,128,0.08);}
-.nav-logo{display:flex; align-items:center; gap:10px; font-weight:700; font-size:1.05rem; letter-spacing:-0.01em; color:var(--volt);}
-.nav-logo img{height:26px; width:auto; display:block;}
-.nav-logo .mark{width:28px; height:28px; border-radius:var(--r-sm); background:linear-gradient(135deg,var(--copper),var(--volt)); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
-.nav-logo .mark svg{width:16px; height:16px; color:#FFFFFF;}
-.nav-links{display:flex; align-items:center; gap:36px;}
-.nav-links a{font-size:0.88rem; color:var(--ink-muted); font-weight:500; transition:color 200ms;}
-.nav-links a:hover{color:var(--volt);}
-.nav-cta{
-  background:var(--copper); color:#FFFFFF !important; padding:10px 20px; border-radius:var(--r-sm);
-  font-weight:600 !important; font-size:0.85rem !important;
-}
-.nav-region{font-size:0.75rem; color:var(--ink-faint); border:1px solid var(--line-strong); padding:6px 12px; border-radius:100px; display:flex; align-items:center; gap:6px;}
-.nav-mobile-toggle{display:none; background:none; border:none; color:var(--ink); cursor:pointer;}
-@media (max-width:900px){
-  .nav-links, .nav-region{display:none;}
-  .nav-mobile-toggle{display:block;}
-}
-
-/* hero */
-.hero{
-  position:relative; padding:150px 0 60px; min-height:92vh; display:flex; align-items:center;
-  background:radial-gradient(ellipse 900px 500px at 15% 0%, rgba(154,204,239,0.35), transparent 60%),
-             radial-gradient(ellipse 700px 500px at 90% 20%, rgba(2,77,128,0.08), transparent 60%),
-             var(--bg);
-}
-.hero-grid{
-  display:grid; grid-template-columns:1.15fr 1fr; gap:56px; align-items:center;
-}
-@media (max-width:980px){.hero-grid{grid-template-columns:1fr; gap:48px;}}
-.eyebrow{
-  display:inline-flex; align-items:center; gap:8px; font-size:0.78rem; font-weight:600;
-  letter-spacing:0.06em; text-transform:uppercase; color:var(--copper);
-  margin-bottom:22px;
-}
-.eyebrow::before{content:''; width:6px; height:6px; border-radius:50%; background:var(--copper);}
-h1.hero-h1{
-  font-weight:700; letter-spacing:-0.01em; color:var(--volt);
-  font-size:clamp(2.1rem,4vw,3.4rem); line-height:1.14; margin-bottom:22px;
-}
-h1.hero-h1 em{font-style:normal; color:var(--copper);}
-.hero-sub{font-size:1.08rem; color:var(--ink-muted); max-width:520px; margin-bottom:34px;}
-.hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:36px;}
-.btn-primary{
-  background:var(--copper); color:#FFFFFF; padding:14px 26px; border-radius:var(--r-sm); font-weight:600; font-size:0.92rem;
-  display:inline-flex; align-items:center; gap:8px; transition:transform 200ms var(--ease), box-shadow 200ms var(--ease), background 200ms;
-}
-.btn-primary:hover{transform:translateY(-2px); box-shadow:0 12px 26px rgba(3,128,214,0.28); background:var(--copper-bright);}
-.btn-ghost{
-  border:1px solid var(--line-strong); color:var(--volt); padding:14px 26px; border-radius:var(--r-sm); font-weight:600; font-size:0.92rem;
-  display:inline-flex; align-items:center; gap:8px; transition:border-color 200ms, background 200ms;
-}
-.btn-ghost:hover{border-color:var(--copper); background:var(--bg-3);}
-.hero-microcopy{font-size:0.8rem; color:var(--ink-faint);}
-.hero-stats{display:flex; gap:34px; margin-top:8px; flex-wrap:wrap;}
-.hstat-num{font-size:1.5rem; font-weight:700; color:var(--volt);}
-.hstat-label{font-size:0.74rem; color:var(--ink-faint); margin-top:2px;}
-
-/* cell diagram */
-.cell-visual{position:relative; display:flex; align-items:center; justify-content:center;}
-.cell-card{
-  background:var(--bg-2); border:1px solid var(--line); border-radius:var(--r-xl); padding:32px;
-  box-shadow:0 4px 16px rgba(2,77,128,0.06), 0 16px 40px rgba(2,77,128,0.06);
-  width:100%; max-width:420px; position:relative;
-}
-.cell-card .tag{position:absolute; top:20px; right:20px; font-size:0.68rem; font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; color:var(--ink-faint); border:1px solid var(--line-strong); padding:4px 9px; border-radius:100px;}
-.cell-specs{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:22px;}
-.cell-spec{background:var(--bg); border:1px solid var(--line); border-radius:var(--r-md); padding:14px 16px;}
-.cell-spec .v{font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; font-size:1.15rem; font-weight:600; color:var(--copper-bright);}
-.cell-spec .k{font-size:0.7rem; color:var(--ink-faint); margin-top:3px;}
-
-/* sections */
-.section{padding:110px 0;}
-.section-tight{padding:80px 0;}
-.section-label{font-size:0.76rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--volt-bright); margin-bottom:16px; display:block;}
-.section-h2{font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; font-weight:600; letter-spacing:-0.015em; font-size:clamp(1.7rem,3vw,2.5rem); line-height:1.15; max-width:680px;}
-.section-intro{color:var(--ink-muted); font-size:1.02rem; max-width:560px; margin-top:16px;}
-.section-head{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-bottom:56px;}
-
-/* trust bar */
-.trustbar{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--bg-2);}
-.trust-row{display:grid; grid-template-columns:repeat(4,1fr); gap:0;}
-@media (max-width:800px){.trust-row{grid-template-columns:repeat(2,1fr);}}
-.trust-item{padding:30px 24px; border-right:1px solid var(--line);}
-.trust-row .trust-item:last-child{border-right:none;}
-@media (max-width:800px){.trust-item:nth-child(2n){border-right:none;} .trust-item{border-bottom:1px solid var(--line);}}
-.trust-item .v{font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; font-size:1.5rem; font-weight:600;}
-.trust-item .k{font-size:0.78rem; color:var(--ink-faint); margin-top:4px;}
-
-/* product cards */
-.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
-.grid-5{display:grid; grid-template-columns:repeat(5,1fr); gap:16px;}
-@media (max-width:980px){.grid-3{grid-template-columns:repeat(2,1fr);} .grid-5{grid-template-columns:repeat(2,1fr);}}
-@media (max-width:640px){.grid-3, .grid-5{grid-template-columns:1fr;}}
-
-.card{
-  background:var(--bg-2); border:1px solid var(--line); border-radius:var(--r-lg); padding:28px;
-  box-shadow:0 1px 3px rgba(2,77,128,0.05), 0 6px 20px rgba(2,77,128,0.04);
-  transition:transform 250ms var(--ease), border-color 250ms, box-shadow 250ms;
-}
-.card:hover{transform:translateY(-3px); border-color:var(--line-strong); box-shadow:0 10px 28px rgba(2,77,128,0.09);}
-.card .icon-box{
-  width:42px; height:42px; border-radius:var(--r-sm); background:var(--bg-3);
-  display:flex; align-items:center; justify-content:center; margin-bottom:18px; color:var(--copper-bright);
-}
-.card .icon-box svg{width:20px; height:20px;}
-.card h3{font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; font-size:1.08rem; font-weight:600; margin-bottom:10px;}
-.card p{color:var(--ink-muted); font-size:0.92rem; margin-bottom:14px;}
-.card .spec-line{font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; font-size:0.78rem; color:var(--ink-faint); border-top:1px solid var(--line); padding-top:12px;}
-.card .spec-line b{color:var(--ink); font-weight:600;}
-
-/* industry rows */
-.industry-list{border-top:1px solid var(--line);}
-.industry-row{
-  display:grid; grid-template-columns:220px 1fr 160px; gap:24px; align-items:center;
-  padding:26px 0; border-bottom:1px solid var(--line);
-}
-@media (max-width:800px){.industry-row{grid-template-columns:1fr; gap:8px;}}
-.industry-row .name{display:flex; align-items:center; gap:12px; font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; font-weight:600; font-size:1.02rem;}
-.industry-row .name .ic{width:34px; height:34px; border-radius:8px; background:var(--bg-3); display:flex; align-items:center; justify-content:center; color:var(--volt-bright); flex-shrink:0;}
-.industry-row .name .ic svg{width:17px; height:17px;}
-.industry-row .desc{color:var(--ink-muted); font-size:0.9rem;}
-.industry-row .tags{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;}
-@media (max-width:800px){.industry-row .tags{justify-content:flex-start;}}
-.tag-pill{font-size:0.68rem; font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; color:var(--ink-faint); border:1px solid var(--line-strong); padding:4px 10px; border-radius:100px;}
-
-/* region cards */
-.region-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
-@media (max-width:980px){.region-grid{grid-template-columns:1fr;}}
-.region-card{
-  border-radius:var(--r-xl); padding:32px; position:relative; overflow:hidden;
-  border:1px solid var(--line); background:var(--bg-2);
-  box-shadow:0 1px 3px rgba(2,77,128,0.05), 0 8px 24px rgba(2,77,128,0.05);
-  display:flex; flex-direction:column; min-height:420px;
-}
-.region-card .glow{position:absolute; width:280px; height:280px; border-radius:50%; filter:blur(90px); opacity:0.32; top:-80px; right:-80px; pointer-events:none;}
-.region-card .flag-eyebrow{font-size:0.72rem; font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; color:var(--ink-faint); letter-spacing:0.05em; text-transform:uppercase; margin-bottom:14px;}
-.region-card h3{font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; font-size:1.5rem; font-weight:600; margin-bottom:16px; letter-spacing:-0.01em;}
-.region-card .rstat{display:flex; align-items:baseline; gap:8px; margin-bottom:14px;}
-.region-card .rstat .n{font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; font-size:1.9rem; font-weight:600; color:var(--copper-bright);}
-.region-card .rstat .l{font-size:0.82rem; color:var(--ink-muted);}
-.region-card p{color:var(--ink-muted); font-size:0.9rem; margin-bottom:22px; flex-grow:1;}
-.region-card .rcta{font-size:0.85rem; font-weight:600; display:flex; align-items:center; gap:6px; color:var(--ink); margin-top:auto;}
-.region-card .rcta svg{width:15px; height:15px;}
-
-/* compliance */
-.compliance-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
-@media (max-width:800px){.compliance-grid{grid-template-columns:1fr;}}
-.compliance-card{border:1px solid var(--line); border-radius:var(--r-lg); padding:28px; background:var(--bg-2); box-shadow:0 1px 3px rgba(2,77,128,0.05), 0 6px 20px rgba(2,77,128,0.04); display:flex; gap:18px;}
-.compliance-card .num{font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; color:var(--ink-faint); font-size:0.85rem; padding-top:2px;}
-.compliance-card h4{font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; font-weight:600; margin-bottom:8px; font-size:1.02rem;}
-.compliance-card p{color:var(--ink-muted); font-size:0.88rem;}
-.status-chip{display:inline-flex; align-items:center; gap:6px; font-size:0.72rem; font-weight:600; padding:4px 10px; border-radius:100px; margin-top:12px;}
-.status-chip.live{background:rgba(47,143,91,0.12); color:var(--ok);}
-.status-chip.build{background:rgba(3,128,214,0.12); color:var(--copper);}
-
-/* resources */
-.resource-row{
-  display:flex; align-items:center; justify-content:space-between; gap:20px;
-  padding:22px 26px; border:1px solid var(--line); border-radius:var(--r-md); background:var(--bg-2); margin-bottom:12px;
-  box-shadow:0 1px 3px rgba(2,77,128,0.04);
-  transition:border-color 200ms, box-shadow 200ms;
-}
-.resource-row:hover{border-color:var(--line-strong); box-shadow:0 6px 18px rgba(2,77,128,0.07);}
-.resource-row .left{display:flex; align-items:center; gap:16px;}
-.resource-row .ic{width:38px; height:38px; border-radius:8px; background:var(--bg-3); display:flex; align-items:center; justify-content:center; color:var(--ink-muted); flex-shrink:0;}
-.resource-row .ic svg{width:18px; height:18px;}
-.resource-row .t{font-weight:600; font-size:0.95rem;}
-.resource-row .s{font-size:0.78rem; color:var(--ink-faint); margin-top:2px;}
-.dl-btn{font-size:0.82rem; font-weight:600; border:1px solid var(--line-strong); padding:9px 16px; border-radius:100px; display:flex; align-items:center; gap:6px; flex-shrink:0;}
-.dl-btn svg{width:14px; height:14px;}
-
-/* final cta */
-.cta-section{
-  background:linear-gradient(160deg,var(--bg-3),var(--bg-2)); border-top:1px solid var(--line);
-  padding:100px 0; position:relative; overflow:hidden;
-}
-.cta-inner{max-width:720px;}
-.rfq-form{margin-top:36px; background:var(--bg); border:1px solid var(--line); border-radius:var(--r-lg); box-shadow:0 1px 3px rgba(2,77,128,0.05), 0 8px 24px rgba(2,77,128,0.05); padding:28px; display:grid; grid-template-columns:1fr 1fr; gap:14px;}
-@media (max-width:640px){.rfq-form{grid-template-columns:1fr;}}
-.rfq-form input, .rfq-form select, .rfq-form textarea{
-  background:#FFFFFF; border:1px solid var(--line-strong); border-radius:0px; padding:13px 15px;
-  color:var(--ink); font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; font-size:0.9rem; width:100%;
-}
-.rfq-form input::placeholder, .rfq-form textarea::placeholder{color:#999999;}
-.rfq-form textarea{grid-column:1/-1; min-height:90px; resize:vertical;}
-.rfq-form .full{grid-column:1/-1;}
-.rfq-form label{font-size:0.76rem; color:var(--ink-faint); margin-bottom:6px; display:block;}
-.rfq-submit{
-  grid-column:1/-1; background:var(--copper); color:#FFFFFF; padding:15px; border-radius:var(--r-sm); font-weight:600;
-  border:none; cursor:pointer; font-size:0.92rem; font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif;
-  transition:background 200ms;
-}
-.rfq-submit:hover{background:var(--copper-bright);}
-
-/* footer */
-footer{padding:56px 0 32px; border-top:1px solid var(--line);}
-.foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:48px;}
-@media (max-width:800px){.foot-grid{grid-template-columns:1fr 1fr; gap:32px;}}
-.foot-grid h5{font-size:0.75rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:16px;}
-.foot-grid a, .foot-grid p{display:block; font-size:0.86rem; color:var(--ink-muted); margin-bottom:10px;}
-.foot-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:28px; border-top:1px solid var(--line); font-size:0.78rem; color:var(--ink-faint); flex-wrap:wrap; gap:12px;}
-
-/* reveal */
-.reveal{opacity:0; transform:translateY(24px); transition:opacity 800ms var(--ease), transform 800ms var(--ease);}
-.reveal.on{opacity:1; transform:translateY(0);}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1; transform:none; transition:none;}}
-
-/* lang strip */
-.lang-strip{display:flex; gap:0; border:1px solid var(--line-strong); border-radius:100px; overflow:hidden; width:fit-content;}
-.lang-strip span{padding:6px 13px; font-size:0.72rem; font-family:'Microsoft YaHei','SimSun',Arial,Helvetica,sans-serif; color:var(--ink-faint); border-right:1px solid var(--line-strong);}
-.lang-strip span:last-child{border-right:none;}
-.lang-strip span.active{color:var(--ink); background:var(--bg-3);}
-
-/* origin band */
-.origin-grid{display:grid; grid-template-columns:1.1fr 1fr; gap:48px; align-items:center;}
-@media (max-width:800px){.origin-grid{grid-template-columns:1fr; gap:28px;}}
-
-/* product card media */
-.card-media{width:100%; height:150px; border-radius:var(--r-md); overflow:hidden; margin-bottom:16px; background:var(--bg-3); display:flex; align-items:center; justify-content:center;}
-.card-media img{width:100%; height:100%; object-fit:cover;}
-
-/* factory proof */
-.proof-video{position:relative; border-radius:var(--r-lg); overflow:hidden; border:1px solid var(--line); background:linear-gradient(150deg,var(--volt),var(--copper)); min-height:280px; display:flex; align-items:center; justify-content:center; color:#fff;}
-.proof-play{width:64px; height:64px; border-radius:50%; background:rgba(255,255,255,0.92); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 30px rgba(0,0,0,0.25);}
-.proof-play svg{width:26px; height:26px; color:var(--volt); margin-left:3px;}
-</style>
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
-<nav class="nav" id="nav">
-  <div class="nav-logo">
-    <img src="http://www.dfdxny.com/images/logo1.png" alt="DFD New Energy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-    <span class="mark" style="display:none;"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 11-13h-7l1-7z"/></svg></span>
-    DFD New Energy
+<!-- NAV -->
+<nav class="nav on-dark-nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 11-13h-7l1-7z"/></svg></span>
+      <span>DFD New Energy<span class="sub">Do-Fluoride Group · SZ002407</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="industries.html">Industries</a>
+      <a href="company.html">Company</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <span class="nav-region"><i data-lucide="globe" style="width:14px;height:14px;"></i> EN · Global</span>
+      <a href="contact.html" class="btn btn-primary" style="padding:10px 20px;font-size:.88rem;">Get a Quote</a>
+      <button class="nav-toggle" aria-label="Menu"><i data-lucide="menu"></i></button>
+    </div>
   </div>
-  <div class="nav-links">
-    <a href="#products">Products</a>
-    <a href="#industries">Industries</a>
-    <a href="#regions">Regions</a>
-    <a href="#compliance">Compliance</a>
-    <a href="#resources">Resources</a>
-    <a href="#contact" class="nav-cta">Get a Quote</a>
-  </div>
-  <div class="nav-region"><i data-lucide="globe" style="width:13px;height:13px;"></i> EN — Global</div>
-  <button class="nav-mobile-toggle"><i data-lucide="menu"></i></button>
 </nav>
 
-<section class="hero grain">
-  <div class="wrap hero-grid">
+<!-- HERO -->
+<header class="hero on-dark">
+  <div class="wrap hero-inner">
     <div>
-      <span class="eyebrow">Cylindrical LFP Cells · ESS · EV &amp; E-Moto Packs</span>
-      <h1 class="hero-h1">Battery cells built by the people who make the fluorochemicals inside them.</h1>
-      <p class="hero-sub">DFD New Energy manufactures large-format cylindrical LiFePO4 cells, EV and e-motorcycle battery packs, and ESS systems — direct from the factory, backed by publicly listed parent Do-Fluoride Chemicals.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn-primary">Request cell specifications <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></a>
-        <a href="#compliance" class="btn-ghost">Verify our certifications</a>
+      <span class="eyebrow reveal">Listed on Shenzhen · Do-Fluoride SZ002407</span>
+      <h1 class="h-hero reveal" data-d="1">The cell behind <em class="hl">300,000 EVs</em> — now direct from the maker, not the middleman.</h1>
+      <p class="lead reveal" data-d="2">DFD New Energy builds large-format cylindrical LFP cells, EV &amp; e-motorcycle packs and complete energy-storage systems — backed by a Shenzhen-listed parent that makes the fluorochemicals inside roughly <strong style="color:#fff">one in four</strong> of the world's lithium batteries. Buy from the factory. Verify everything.</p>
+      <div class="hero-ctas reveal" data-d="3">
+        <a href="contact.html" class="btn btn-primary btn-lg">Request cell specifications <i data-lucide="arrow-right"></i></a>
+        <a href="products.html" class="btn btn-ghost btn-lg">Explore the range</a>
       </div>
-      <p class="hero-microcopy" style="margin-bottom:26px;"><i data-lucide="shield-check" style="width:14px;height:14px;vertical-align:-2px;color:var(--ok);"></i> Certs mapped to production batches · warranty backed by a listed public company · factory audit on request</p>
-      <div class="hero-stats">
-        <div><div class="hstat-num">2010</div><div class="hstat-label">Manufacturing since</div></div>
-        <div><div class="hstat-num">7,000+</div><div class="hstat-label">Group engineers &amp; staff</div></div>
-        <div><div class="hstat-num">300,000+</div><div class="hstat-label">EV packs already on the road</div></div>
+      <div class="hero-verify reveal" data-d="4"><i data-lucide="shield-check"></i> Certifications mapped to production batches · warranty backed by a listed public company · factory audit on request</div>
+    </div>
+    <div class="hero-visual reveal" data-d="2">
+      <div class="cell-stage">
+        <div class="cell-glow"></div>
+        <img class="cell-photo" src="http://www.dfdxny.com/js/kindeditor/attached/image/20241025/20241025121109_76492.jpg" alt="DFD large-format cylindrical LiFePO4 battery cells — 40/42, 46 and 60/65 series" onerror="this.style.display='none';">
+        <div class="hero-chip c1"><div class="k">Capacity</div><div class="v tnum">8.5 GWh</div></div>
+        <div class="hero-chip c2"><div class="k">Certified</div><div class="v">UN38.3 · UL1973</div></div>
+        <div class="hero-chip c3"><div class="k">Cycle life</div><div class="v tnum">4,000+</div></div>
       </div>
     </div>
-    <div class="cell-visual">
-      <div class="cell-card">
-        <span class="tag">SERIES 46</span>
-        <svg viewBox="0 0 200 260" width="100%" style="max-width:180px; margin:0 auto; display:block;">
-          <rect x="55" y="20" width="90" height="220" rx="16" fill="none" stroke="#0380D6" stroke-width="2"/>
-          <line x1="55" y1="50" x2="145" y2="50" stroke="#024D80" stroke-width="1.5" stroke-dasharray="3 3"/>
-          <line x1="55" y1="210" x2="145" y2="210" stroke="#024D80" stroke-width="1.5" stroke-dasharray="3 3"/>
-          <rect x="65" y="55" width="70" height="150" rx="4" fill="rgba(2,77,128,0.06)" stroke="rgba(2,77,128,0.35)" stroke-width="1"/>
-          <path d="M65 60 L135 60 M65 75 L135 75 M65 90 L135 90 M65 105 L135 105 M65 120 L135 120 M65 135 L135 135 M65 150 L135 150 M65 165 L135 165 M65 180 L135 180 M65 195 L135 195" stroke="rgba(2,77,128,0.10)" stroke-width="1"/>
-          <circle cx="100" cy="30" r="9" fill="none" stroke="#0380D6" stroke-width="2"/>
-          <circle cx="100" cy="230" r="9" fill="none" stroke="#0380D6" stroke-width="2"/>
-          <text x="100" y="15" text-anchor="middle" fill="#78868F" font-size="8" font-family="Microsoft YaHei, Arial, sans-serif">+</text>
-          <text x="100" y="252" text-anchor="middle" fill="#78868F" font-size="8" font-family="Microsoft YaHei, Arial, sans-serif">−</text>
-        </svg>
-        <p style="font-size:0.78rem; color:var(--ink-faint); text-align:center; margin-top:6px;">Single-side busbar (unilateral confluence) — lower internal resistance, simpler pack assembly</p>
-        <div class="cell-specs">
-          <div class="cell-spec"><div class="v">3.2V</div><div class="k">Nominal voltage</div></div>
-          <div class="cell-spec"><div class="v">20–40Ah</div><div class="k">Capacity range</div></div>
-          <div class="cell-spec"><div class="v">4,000+</div><div class="k">Cycles to 70% SOH</div></div>
-          <div class="cell-spec"><div class="v">40/42/46/60/65</div><div class="k">Cylindrical series</div></div>
-        </div>
+  </div>
+  <!-- proof strip -->
+  <div class="proofstrip">
+    <div class="wrap">
+      <span class="label">Already powering</span>
+      <div class="logos">
+        <span class="plogo">SAIC-GM</span>
+        <span class="plogo">Chery</span>
+        <span class="plogo">NETA</span>
       </div>
+      <span style="color:var(--on-dark-muted);font-size:.88rem;">Among the first lithium power-battery suppliers to China's A00-class EV segment.</span>
+    </div>
+  </div>
+</header>
+
+<!-- STAT BAND -->
+<section class="statband">
+  <div class="wrap">
+    <div class="stat-grid">
+      <div class="stat-cell reveal"><div class="n tnum">¥<span data-count="1.66" data-dec="2">0</span><span class="u">B</span></div><div class="l">Registered capital, DFD New Energy</div></div>
+      <div class="stat-cell reveal" data-d="1"><div class="n tnum"><span data-count="8.5" data-dec="1">0</span><span class="u"> GWh</span></div><div class="l">Cell capacity — Jiaozuo &amp; Nanning</div></div>
+      <div class="stat-cell reveal" data-d="2"><div class="n tnum"><span data-count="623">0</span></div><div class="l">Authorised patents</div></div>
+      <div class="stat-cell reveal" data-d="3"><div class="n tnum"><span data-count="7000" data-suffix="+">0</span></div><div class="l">Group engineers &amp; staff</div></div>
     </div>
   </div>
 </section>
 
-<div class="trustbar">
-  <div class="wrap">
-    <div class="trust-row">
-      <div class="trust-item"><div class="v">¥1.66B</div><div class="k">Registered capital, DFD New Energy</div></div>
-      <div class="trust-item"><div class="v">8.5GWh</div><div class="k">Combined cell capacity — Jiaozuo &amp; Nanning</div></div>
-      <div class="trust-item"><div class="v">1 in 4</div><div class="k">Lithium batteries worldwide use Polyfluorides materials</div></div>
-      <div class="trust-item"><div class="v">21</div><div class="k">Subsidiaries · 4 overseas production bases</div></div>
-    </div>
-  </div>
-</div>
-
-<section class="section-tight" style="padding:52px 0; border-bottom:1px solid var(--line);">
-  <div class="wrap">
-    <p style="font-size:0.76rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:18px;">Already supplying</p>
-    <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
-      <span class="tag-pill" style="font-size:0.82rem; padding:8px 16px;">SAIC-GM</span>
-      <span class="tag-pill" style="font-size:0.82rem; padding:8px 16px;">Chery</span>
-      <span class="tag-pill" style="font-size:0.82rem; padding:8px 16px;">NETA</span>
-      <span style="color:var(--ink-muted); font-size:0.88rem; margin-left:6px;">— among the earliest lithium power battery suppliers to China's A00-class EV segment, with 300,000+ vehicles on the road</span>
-    </div>
-  </div>
-</section>
-
-<section class="section-tight" id="origin" style="background:linear-gradient(150deg,var(--bg-3),var(--bg-2)); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
-  <div class="wrap">
-    <div class="origin-grid">
-      <div class="reveal">
-        <span class="section-label">Non-China Origin — the tariff answer</span>
-        <h2 class="section-h2" style="font-size:clamp(1.5rem,2.6vw,2.1rem);">Chinese-parent quality, without the China-origin tariff.</h2>
-        <p class="section-intro" style="max-width:none;">From January 2026, China-<em>origin</em> batteries face ~82% total US tariffs. DFD's production bases in <b>Indonesia and Bolivia</b> let qualifying buyers source large-format LFP cells that are compliant, cost-sane, and politically defensible — an origin story <b>no reseller can offer.</b></p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:20px;">
-          <span class="tag-pill" style="padding:8px 15px;"><i data-lucide="factory" style="width:13px;height:13px;vertical-align:-2px;"></i> Indonesia base</span>
-          <span class="tag-pill" style="padding:8px 15px;"><i data-lucide="factory" style="width:13px;height:13px;vertical-align:-2px;"></i> Bolivia base</span>
-          <span class="tag-pill" style="padding:8px 15px;"><i data-lucide="recycle" style="width:13px;height:13px;vertical-align:-2px;"></i> EU recycling partners underway</span>
-        </div>
-      </div>
-      <div class="reveal" style="background:var(--bg); border:1px solid var(--line); border-radius:var(--r-lg); padding:26px; box-shadow:0 8px 24px rgba(2,77,128,0.06);">
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;"><i data-lucide="map-pin" style="width:18px;height:18px;color:var(--copper-bright);"></i><span style="font-weight:600;">Where "origin" changes your landed cost</span></div>
-        <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--line);"><span style="color:var(--ink-muted); font-size:0.9rem;">China-origin cell → US</span><span style="font-family:'Microsoft YaHei',Arial,sans-serif; font-weight:600; color:#c0392b;">~82% tariff</span></div>
-        <div style="display:flex; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--line);"><span style="color:var(--ink-muted); font-size:0.9rem;">Non-China-origin cell → US</span><span style="font-family:'Microsoft YaHei',Arial,sans-serif; font-weight:600; color:var(--ok);">materially lower</span></div>
-        <div style="display:flex; justify-content:space-between; padding:12px 0;"><span style="color:var(--ink-muted); font-size:0.9rem;">EU / MEA standalone cells</span><span style="font-family:'Microsoft YaHei',Arial,sans-serif; font-weight:600; color:var(--copper-bright);">open market</span></div>
-        <p style="font-size:0.72rem; color:var(--ink-faint); margin-top:12px;">Indicative only — confirm the exact tariff stack with your customs broker.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- PRODUCTS BENTO -->
 <section class="section" id="products">
   <div class="wrap">
-    <div class="section-head">
-      <div>
-        <span class="section-label">Product Range</span>
-        <h2 class="section-h2">Six product lines. One factory relationship.</h2>
+    <div class="sec-head-row">
+      <div class="sec-head" style="margin-bottom:0;">
+        <span class="eyebrow reveal">The product range</span>
+        <h2 class="h2 reveal" data-d="1">One factory relationship.<br>Everything from cell to system.</h2>
       </div>
-      <p class="section-intro">Cells, packs, storage systems, and control electronics — sourced from a single manufacturer instead of stitched together across brokers.</p>
+      <a href="products.html" class="link-arrow reveal" data-d="2">See full specifications <i data-lucide="arrow-right"></i></a>
     </div>
-    <div class="grid-3">
-      <div class="card reveal">
-        <div class="card-media"><img src="http://www.dfdxny.com/js/kindeditor/attached/image/20241025/20241025121109_76492.jpg" alt="DFD large-format cylindrical LiFePO4 cells — 40/42, 46 and 60/65 series" loading="lazy" onerror="this.parentElement.style.display='none';"></div>
-        <div class="icon-box"><i data-lucide="battery-full"></i></div>
-        <h3>Cylindrical LFP Cells</h3>
-        <p>Large-format 33, 40/42, 46, and 60/65 series cylindrical cells, plus a prismatic (square) format. Dual explosion-proof venting, full-lug construction, top-discharge / bottom heat dissipation.</p>
-        <div class="spec-line">Cycle life: <b>4,000+ @ 70% SOH</b> · 2C max continuous</div>
+
+    <div class="bento">
+      <!-- hero product tile -->
+      <div class="cell wide tile tile-dark reveal">
+        <div class="tile-media" style="margin:-28px -28px 22px;height:230px;">
+          <img src="http://www.dfdxny.com/js/kindeditor/attached/image/20241025/20241025121016_36559.jpg" alt="DFD large-format cylindrical LFP cell close-up" onerror="this.parentElement.style.background='linear-gradient(155deg,#0B2136,#12395C)';this.style.display='none';">
+        </div>
+        <span class="badge blue" style="align-self:flex-start;">Flagship platform</span>
+        <h3 class="h3" style="margin-top:12px;">Large-Format Cylindrical LFP Cells</h3>
+        <p>The 33, 40/42, 46 and 60/65 series — plus a prismatic format and sodium-ion. Our <strong>unilateral-confluence</strong> design puts the busbar on one side: lower internal resistance, simpler pack assembly, more usable space inside every pack.</p>
+        <div class="spec">Nominal <b>3.2 V</b> · Cycle life <b>4,000+ @ 70% SOH</b> · Dual explosion-proof venting</div>
       </div>
-      <div class="card reveal">
-        <div class="card-media"><img src="http://www.dfdxny.com/js/kindeditor/attached/image/20241025/20241025121016_36559.jpg" alt="DFD EV and e-motorcycle battery packs" loading="lazy" onerror="this.parentElement.style.display='none';"></div>
-        <div class="icon-box"><i data-lucide="car-front"></i></div>
-        <h3>Passenger &amp; Light-EV Packs</h3>
-        <p>Passenger EV packs running in SAIC-GM, Chery, and NETA models; e-bike, moped, motorcycle and tricycle packs across the 33/40/42/60 series.</p>
-        <div class="spec-line">Pack codes: <b>361X · 482X · 603X · 723X</b></div>
+
+      <!-- packs -->
+      <div class="cell half tile reveal" data-d="1">
+        <div class="ic"><i data-lucide="car-front"></i></div>
+        <h3 class="h3">EV &amp; E-Mobility Packs</h3>
+        <p>Passenger EV packs proven in SAIC-GM, Chery and NETA vehicles. Plus e-bike, moped, motorcycle and tricycle packs across the 33/40/42/60 series.</p>
+        <div class="spec">Pack codes <b>361X · 482X · 603X · 723X</b></div>
       </div>
-      <div class="card reveal">
-        <div class="card-media"><img src="http://www.dfdxny.com/js/kindeditor/attached/image/20241028/20241028111053_13504.jpg" alt="DFD energy storage systems — C&amp;I, residential and portable" loading="lazy" onerror="this.parentElement.style.display='none';"></div>
-        <div class="icon-box"><i data-lucide="warehouse"></i></div>
-        <h3>Energy Storage Systems</h3>
-        <p>C&amp;I storage power stations, stacked wall-mounted home storage, and portable/backup power (500W–5000W).</p>
-        <div class="spec-line">Scale: <b>Residential → C&amp;I</b></div>
+
+      <!-- ess -->
+      <div class="cell half tile reveal" data-d="2">
+        <div class="ic"><i data-lucide="warehouse"></i></div>
+        <h3 class="h3">Energy Storage Systems</h3>
+        <p>Four systems from one line: C&amp;I outdoor power stations (IP54, liquid-cooled), stacked wall-mounted home storage, and portable/backup units.</p>
+        <div class="spec">Scale <b>500 W → utility C&amp;I</b></div>
       </div>
-      <div class="card reveal">
-        <div class="icon-box"><i data-lucide="cpu"></i></div>
-        <h3>Motors &amp; Electronic Control</h3>
-        <p>Motor and control systems developed alongside the cell business — for EV and e-motorcycle drivetrains.</p>
-        <div class="spec-line">Category: <b>Drivetrain electronics</b></div>
+
+      <!-- three small -->
+      <div class="cell tile reveal" data-d="1">
+        <div class="ic"><i data-lucide="recycle"></i></div>
+        <h3 class="h3">Recycling &amp; Circular</h3>
+        <p>Closed-loop production → use → recovery, with EU localization partnerships underway.</p>
       </div>
-      <div class="card reveal">
-        <div class="icon-box"><i data-lucide="recycle"></i></div>
-        <h3>Battery Recycling &amp; Circular Economy</h3>
-        <p>Closed-loop production → use → recycling → resource regeneration, with active European localization partnerships on cathode materials and recycling already underway.</p>
-        <div class="spec-line">Status: <b>EU partnerships in progress</b></div>
+      <div class="cell tile reveal" data-d="2">
+        <div class="ic"><i data-lucide="radio-tower"></i></div>
+        <h3 class="h3">Telecom &amp; Microgrid</h3>
+        <p>Backup power sized to site load for off-grid and unreliable-grid infrastructure.</p>
       </div>
-      <div class="card reveal">
-        <div class="icon-box"><i data-lucide="radio-tower"></i></div>
-        <h3>Telecom &amp; Microgrid Backup</h3>
-        <p>Backup power for telecom infrastructure and distributed microgrid generation, sized to site load.</p>
-        <div class="spec-line">Use case: <b>Off-grid &amp; backup</b></div>
+      <div class="cell tile tile-amber reveal" data-d="3">
+        <div class="ic"><i data-lucide="cpu"></i></div>
+        <h3 class="h3">Motors &amp; Control</h3>
+        <p>Drivetrain motors and electronic control developed alongside the cell business.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-tight" id="industries" style="background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+<!-- WHY DIRECT (visual sales) -->
+<section class="section-sm" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
   <div class="wrap">
-    <div class="section-head">
-      <div>
-        <span class="section-label">Solutions by Industry</span>
-        <h2 class="section-h2">Built for five buyer categories.</h2>
-      </div>
+    <div class="sec-head center reveal">
+      <span class="eyebrow amber">Buy direct — here's the difference</span>
+      <h2 class="h2" style="margin:16px 0 14px;">A trader sells you a box. We sell you a guarantee.</h2>
+      <p class="lead" style="margin:0 auto;">You can find our cells on a dozen marketplaces. Only one supplier can put a listed public company behind the warranty on a 15-year asset — and prove every claim.</p>
     </div>
-    <div class="industry-list">
-      <div class="industry-row reveal">
-        <div class="name"><span class="ic"><i data-lucide="car-front" style="width:16px;height:16px;"></i></span>EV OEM</div>
-        <div class="desc">Cell and pack supply for electric vehicle manufacturers building around cylindrical LFP.</div>
-        <div class="tags"><span class="tag-pill">Pack assembly</span><span class="tag-pill">Custom BMS-ready</span></div>
+    <div class="compare reveal" data-d="1">
+      <div class="col them">
+        <h3 class="h3">A marketplace reseller</h3>
+        <p class="tagline">The middleman between you and the factory</p>
+        <div class="cmp-item no"><span class="mk"><i data-lucide="x"></i></span> Re-quotes a spec sheet they didn't test</div>
+        <div class="cmp-item no"><span class="mk"><i data-lucide="x"></i></span> No warranty they can actually honour in 2039</div>
+        <div class="cmp-item no"><span class="mk"><i data-lucide="x"></i></span> No factory to audit, no batch traceability</div>
+        <div class="cmp-item no"><span class="mk"><i data-lucide="x"></i></span> Margin stacked on top of the real price</div>
+        <div class="cmp-item no"><span class="mk"><i data-lucide="x"></i></span> Disappears when something goes wrong</div>
       </div>
-      <div class="industry-row reveal">
-        <div class="name"><span class="ic"><i data-lucide="bike" style="width:16px;height:16px;"></i></span>E-Two-Wheeler</div>
-        <div class="desc">High-volume e-motorcycle and e-scooter battery packs, a core growth category across Southeast Asia and Africa.</div>
-        <div class="tags"><span class="tag-pill">High volume</span><span class="tag-pill">OEM/ODM</span></div>
-      </div>
-      <div class="industry-row reveal">
-        <div class="name"><span class="ic"><i data-lucide="home" style="width:16px;height:16px;"></i></span>Residential &amp; C&amp;I Storage</div>
-        <div class="desc">Cell supply for pack integrators building home and commercial energy storage systems.</div>
-        <div class="tags"><span class="tag-pill">12V–48V systems</span></div>
-      </div>
-      <div class="industry-row reveal">
-        <div class="name"><span class="ic"><i data-lucide="zap" style="width:16px;height:16px;"></i></span>Utility-Scale BESS</div>
-        <div class="desc">Cell supply for developers and integrators building grid-scale storage projects.</div>
-        <div class="tags"><span class="tag-pill">Multi-MWh volume</span></div>
-      </div>
-      <div class="industry-row reveal">
-        <div class="name"><span class="ic"><i data-lucide="radio-tower" style="width:16px;height:16px;"></i></span>Telecom &amp; Microgrid</div>
-        <div class="desc">Backup power for infrastructure operators running off-grid or unreliable-grid sites.</div>
-        <div class="tags"><span class="tag-pill">Backup power</span><span class="tag-pill">Off-grid</span></div>
+      <div class="col us">
+        <h3 class="h3">DFD New Energy, direct</h3>
+        <p class="tagline">The manufacturer, backed by SZ002407</p>
+        <div class="cmp-item yes"><span class="mk"><i data-lucide="check"></i></span> Certificates mapped to your production batch</div>
+        <div class="cmp-item yes"><span class="mk"><i data-lucide="check"></i></span> Warranty underwritten by a listed public company</div>
+        <div class="cmp-item yes"><span class="mk"><i data-lucide="check"></i></span> Audit the Jiaozuo &amp; Nanning lines before you commit</div>
+        <div class="cmp-item yes"><span class="mk"><i data-lucide="check"></i></span> Factory pricing — no reseller markup</div>
+        <div class="cmp-item yes"><span class="mk"><i data-lucide="check"></i></span> Engineers on the line answer the phone</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="regions">
+<!-- INDUSTRIES -->
+<section class="section" id="industries">
   <div class="wrap">
-    <div class="section-head">
-      <div>
-        <span class="section-label">Solutions by Region</span>
-        <h2 class="section-h2">Three markets. Three different reasons to buy now.</h2>
+    <div class="sec-head-row">
+      <div class="sec-head" style="margin-bottom:0;">
+        <span class="eyebrow reveal">Solutions by industry</span>
+        <h2 class="h2 reveal" data-d="1">Built for the people who buy at volume.</h2>
       </div>
-      <p class="section-intro">Each region has a different demand driver — the sales approach follows the driver, not a single global pitch.</p>
+      <a href="industries.html" class="link-arrow reveal" data-d="2">Explore industry solutions <i data-lucide="arrow-right"></i></a>
     </div>
-    <div class="region-grid">
-      <div class="region-card reveal">
-        <div class="glow" style="background:var(--copper);"></div>
-        <div class="flag-eyebrow">Middle East &amp; Africa</div>
-        <h3>Mandate-backed demand</h3>
-        <div class="rstat"><span class="n">19.2%</span><span class="l">MEA BESS market CAGR through 2031</span></div>
-        <p>Sovereign-fund-backed storage tenders in Saudi Arabia and rapid renewable buildout in Egypt are creating direct, large-volume procurement — not price-shopped spot orders.</p>
-        <div class="rcta">Talk to our MEA desk <i data-lucide="arrow-right"></i></div>
+    <div class="ind-list">
+      <div class="ind-row reveal">
+        <div class="ic"><i data-lucide="car-front"></i></div>
+        <div class="name">EV OEMs<span>Passenger &amp; light electric vehicles</span></div>
+        <div class="desc">Cell and pack supply engineered around cylindrical LFP, proven at scale in production vehicles.</div>
+        <div class="out"><div class="metric tnum">300,000+</div><div class="metric-l">vehicles on the road</div></div>
       </div>
-      <div class="region-card reveal">
-        <div class="glow" style="background:var(--volt);"></div>
-        <div class="flag-eyebrow">Europe</div>
-        <h3>Compliance-first entry</h3>
-        <div class="rstat"><span class="n">7×</span><span class="l">Growth in Chinese battery shipments to the EU</span></div>
-        <p>Packs already reach ASEAN and European buyers, and localization partnerships with European cathode-material and recycling suppliers are already underway. The remaining gate is the EU's Battery Passport regime — we're building toward it early.</p>
-        <div class="rcta">See our compliance roadmap <i data-lucide="arrow-right"></i></div>
+      <div class="ind-row reveal" data-d="1">
+        <div class="ic"><i data-lucide="bike"></i></div>
+        <div class="name">E-Two-Wheeler<span>Scooters, motorcycles, trikes</span></div>
+        <div class="desc">High-volume OEM/ODM packs — the fastest-growing electrification category across SEA &amp; Africa.</div>
+        <div class="out"><div class="metric">361X–723X</div><div class="metric-l">pack platforms</div></div>
       </div>
-      <div class="region-card reveal">
-        <div class="glow" style="background:var(--olive);"></div>
-        <div class="flag-eyebrow">Southeast Asia</div>
-        <h3>Two-wheeler volume</h3>
-        <div class="rstat"><span class="n">130GW+</span><span class="l">Global BESS additions projected in 2026</span></div>
-        <p>E-motorcycle electrification and fast-growing residential storage make this a high-volume, cost-sensitive market suited to our cylindrical cell platform.</p>
-        <div class="rcta">Talk to our SEA desk <i data-lucide="arrow-right"></i></div>
+      <div class="ind-row reveal" data-d="2">
+        <div class="ic"><i data-lucide="home"></i></div>
+        <div class="name">Residential &amp; C&amp;I Storage<span>Home &amp; commercial ESS</span></div>
+        <div class="desc">Cell supply and complete systems for integrators building home and commercial storage.</div>
+        <div class="out"><div class="metric">IP54</div><div class="metric-l">liquid-cooled C&amp;I</div></div>
+      </div>
+      <div class="ind-row reveal" data-d="2">
+        <div class="ic"><i data-lucide="zap"></i></div>
+        <div class="name">Utility-Scale BESS<span>Grid &amp; project developers</span></div>
+        <div class="desc">Multi-MWh cell supply for developers and EPCs delivering grid-scale storage.</div>
+        <div class="out"><div class="metric tnum">4,000+</div><div class="metric-l">cycle life</div></div>
+      </div>
+      <div class="ind-row reveal" data-d="2">
+        <div class="ic"><i data-lucide="radio-tower"></i></div>
+        <div class="name">Telecom &amp; Microgrid<span>Infrastructure operators</span></div>
+        <div class="desc">Reliable backup for off-grid and unreliable-grid sites, sized to load.</div>
+        <div class="out"><div class="metric">24/7</div><div class="metric-l">backup duty</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section-tight" id="compliance" style="background:var(--bg-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+<!-- NON-CHINA ORIGIN SPLIT -->
+<section class="section" style="background:linear-gradient(180deg,var(--paper),var(--paper-2));border-top:1px solid var(--line);">
   <div class="wrap">
-    <div class="section-head">
+    <div class="split">
+      <div class="split-media reveal">
+        <img src="http://www.dfdxny.com/js/kindeditor/attached/image/20241028/20241028111053_13504.jpg" alt="Automated LFP cell production line — non-China-origin manufacturing capability" onerror="this.parentElement.style.background='linear-gradient(155deg,#0B2136,#12395C)';this.style.display='none';">
+        <div class="float-stat"><div class="n">2 bases</div><div class="l">Indonesia &amp; Bolivia</div></div>
+      </div>
       <div>
-        <span class="section-label">Trust &amp; Compliance — the data room</span>
-        <h2 class="section-h2">Everything your risk committee will ask for, before they ask.</h2>
-      </div>
-      <p class="section-intro">A reseller can copy a spec sheet. It cannot put a listed public company behind your warranty. This is the difference — made verifiable.</p>
-    </div>
-    <div class="proof-video reveal" style="margin-bottom:20px;">
-      <div style="text-align:center;">
-        <div class="proof-play"><i data-lucide="play"></i></div>
-        <p style="margin-top:16px; font-weight:600; font-size:1.05rem;">2-minute factory audit walkthrough</p>
-        <p style="font-size:0.85rem; opacity:0.85;">Jiaozuo &amp; Nanning lines · 8.5 GWh combined capacity · verify before you commit</p>
-      </div>
-    </div>
-    <div class="compliance-grid">
-      <div class="compliance-card reveal">
-        <span class="num mono">01</span>
-        <div>
-          <h4>Certified — UL1973, UL1642, IEC62619, UN38.3</h4>
-          <p>Passenger and light-EV cells hold all four certifications, with transport safety documentation supplied per shipment.</p>
-          <span class="status-chip live"><i data-lucide="check" style="width:12px;height:12px;"></i> Certified — documentation on file</span>
-        </div>
-      </div>
-      <div class="compliance-card reveal">
-        <span class="num mono">02</span>
-        <div>
-          <h4>Chinese national standards</h4>
-          <p>GB/T 31484-2015 (cycle life), GB/T 31486-2015 (electrical performance), GB 38031-2020 (power battery safety) — all passed.</p>
-          <span class="status-chip live"><i data-lucide="check" style="width:12px;height:12px;"></i> Certified — documentation on file</span>
-        </div>
-      </div>
-      <div class="compliance-card reveal">
-        <span class="num mono">03</span>
-        <div>
-          <h4>EU Battery Passport readiness</h4>
-          <p>Cathode-material and recycling partnerships with European suppliers are already in motion — the digital passport data layer is the remaining build.</p>
-          <span class="status-chip build"><i data-lucide="clock" style="width:12px;height:12px;"></i> Localization underway — 2026 roadmap</span>
-        </div>
-      </div>
-      <div class="compliance-card reveal">
-        <span class="num mono">04</span>
-        <div>
-          <h4>Warranty backed by a listed public company</h4>
-          <p>Named warranty terms standing behind a 10–15 year asset — underwritten by parent Do-Fluoride (Shenzhen: SZ002407), not a trading intermediary.</p>
-          <span class="status-chip live"><i data-lucide="check" style="width:12px;height:12px;"></i> Parent-backed — SZ002407</span>
-        </div>
-      </div>
-      <div class="compliance-card reveal">
-        <span class="num mono">05</span>
-        <div>
-          <h4>Verifiable references</h4>
-          <p>300,000+ vehicles on the road across SAIC-GM, Chery and NETA — real programmes your team can diligence, not logos on a slide.</p>
-          <span class="status-chip live"><i data-lucide="check" style="width:12px;height:12px;"></i> Named &amp; verifiable</span>
-        </div>
-      </div>
-      <div class="compliance-card reveal">
-        <span class="num mono">06</span>
-        <div>
-          <h4>Factory audit access</h4>
-          <p>Facility and process walkthroughs for qualifying buyers ahead of first purchase order.</p>
-          <span class="status-chip live"><i data-lucide="check" style="width:12px;height:12px;"></i> Available on request</span>
-        </div>
+        <span class="eyebrow amber reveal">The tariff answer</span>
+        <h2 class="h2 reveal" data-d="1" style="margin:16px 0 18px;">Chinese-parent quality, <em class="hl-amber">without the China-origin tariff.</em></h2>
+        <p class="lead reveal" data-d="2">From 2026, China-<em>origin</em> batteries face steep US tariffs. Our production bases in <strong>Indonesia and Bolivia</strong> let qualifying buyers source large-format LFP that is compliant, cost-sane, and politically defensible — an origin story no reseller can offer.</p>
+        <ul class="checklist reveal" data-d="2">
+          <li><span class="mk"><i data-lucide="check"></i></span> Neutralises origin-based tariffs into Western markets</li>
+          <li><span class="mk"><i data-lucide="check"></i></span> Political cover for Gulf &amp; EU sovereign tenders</li>
+          <li><span class="mk"><i data-lucide="check"></i></span> The same 8.5 GWh certified-parent engineering</li>
+        </ul>
+        <div style="margin-top:26px;" class="reveal" data-d="3"><a href="contact.html" class="btn btn-amber">Ask about non-China-origin supply <i data-lucide="arrow-right"></i></a></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="resources">
+<!-- COMPLIANCE / DATA ROOM -->
+<section class="section on-dark" style="background:var(--ink);color:var(--on-dark);">
   <div class="wrap">
-    <div class="section-head">
-      <div>
-        <span class="section-label">Resources</span>
-        <h2 class="section-h2">Spec sheets, not sales decks.</h2>
-      </div>
+    <div class="sec-head center reveal" style="max-width:760px;">
+      <span class="eyebrow" style="color:var(--blue-glow);">Trust &amp; compliance — the data room</span>
+      <h2 class="h2" style="color:#fff;margin:16px 0 16px;">Everything your risk committee will ask for. Before they ask.</h2>
+      <p class="lead" style="margin:0 auto;color:var(--on-dark-muted);">A reseller can copy a certificate PDF. It cannot put a public company behind your warranty. This is the difference — made verifiable.</p>
     </div>
-    <div>
-      <div class="resource-row reveal">
-        <div class="left"><span class="ic"><i data-lucide="file-text"></i></span><div><div class="t">Cell Spec Sheet — Cylindrical 40/42/46/60/65 &amp; Prismatic</div><div class="s">PDF · Voltage, capacity, cycle life, dimensions</div></div></div>
-        <div class="dl-btn"><i data-lucide="download"></i> Download</div>
-      </div>
-      <div class="resource-row reveal">
-        <div class="left"><span class="ic"><i data-lucide="file-text"></i></span><div><div class="t">ESS Module Integration Guide</div><div class="s">PDF · Pack configuration &amp; BMS interface</div></div></div>
-        <div class="dl-btn"><i data-lucide="download"></i> Download</div>
-      </div>
-      <div class="resource-row reveal">
-        <div class="left"><span class="ic"><i data-lucide="file-text"></i></span><div><div class="t">EU Battery Passport Readiness Brief</div><div class="s">PDF · What's required, what we've built so far</div></div></div>
-        <div class="dl-btn"><i data-lucide="download"></i> Download</div>
-      </div>
-      <div class="resource-row reveal">
-        <div class="left"><span class="ic"><i data-lucide="file-text"></i></span><div><div class="t">Export Documentation Checklist — MEA / EU / SEA</div><div class="s">PDF · Certifications, packaging, freight classification</div></div></div>
-        <div class="dl-btn"><i data-lucide="download"></i> Download</div>
-      </div>
+    <div class="certgrid reveal" data-d="1">
+      <div class="cert"><div class="ic"><i data-lucide="flame"></i></div><div class="name">UN38.3</div><div class="desc">Transport safety</div></div>
+      <div class="cert"><div class="ic"><i data-lucide="shield-check"></i></div><div class="name">IEC62619</div><div class="desc">Industrial cell safety</div></div>
+      <div class="cert"><div class="ic"><i data-lucide="badge-check"></i></div><div class="name">UL1973 · UL1642</div><div class="desc">Stationary &amp; cell</div></div>
+      <div class="cert"><div class="ic"><i data-lucide="scroll-text"></i></div><div class="name">GB/T &amp; GB 38031</div><div class="desc">National standards</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px;" class="reveal" data-d="2">
+      <div class="tile tile-dark"><div class="ic"><i data-lucide="landmark"></i></div><h3 class="h3">Parent-backed warranty</h3><p>Named terms behind a 10–15 year asset — underwritten by Do-Fluoride (SZ002407), not a trading intermediary.</p></div>
+      <div class="tile tile-dark"><div class="ic"><i data-lucide="factory"></i></div><h3 class="h3">Audit before you buy</h3><p>Walk the Jiaozuo &amp; Nanning lines — 8.5 GWh combined — and verify in under two minutes.</p></div>
+      <div class="tile tile-dark"><div class="ic"><i data-lucide="badge-check"></i></div><h3 class="h3">Verifiable references</h3><p>300,000+ vehicles across SAIC-GM, Chery, NETA — programmes your team can diligence, not logos on a slide.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:36px;" class="reveal" data-d="2"><a href="company.html" class="btn btn-ghost btn-lg">See the full company dossier <i data-lucide="arrow-right"></i></a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta">
+  <div class="wrap" style="text-align:center;max-width:760px;">
+    <span class="eyebrow reveal" style="justify-content:center;color:var(--blue-glow);">Start a conversation</span>
+    <h2 class="h1 reveal" data-d="1" style="color:#fff;margin:16px 0 18px;">Tell us the format, the volume, and the market.</h2>
+    <p class="lead reveal" data-d="2" style="margin:0 auto 30px;color:var(--on-dark-muted);">We come back with pricing, MOQ and lead time for your region within four business hours — with the certificates and warranty terms attached. Not a brochure.</p>
+    <div class="hero-ctas reveal" data-d="3" style="justify-content:center;">
+      <a href="contact.html" class="btn btn-primary btn-lg">Request a quote <i data-lucide="arrow-right"></i></a>
+      <a href="products.html" class="btn btn-ghost btn-lg">Browse products first</a>
     </div>
   </div>
 </section>
 
-<section class="cta-section" id="contact">
-  <div class="wrap">
-    <div class="cta-inner reveal">
-      <span class="section-label">Get a Quote</span>
-      <h2 class="section-h2">Tell us the cell format, the volume, and the market.</h2>
-      <p class="section-intro">We'll come back with pricing, MOQ, and lead time for your region — not a generic brochure.</p>
-    </div>
-    <form class="rfq-form reveal" onsubmit="event.preventDefault(); this.querySelector('.rfq-submit').textContent='Request received';">
-      <div><label>Company</label><input type="text" placeholder="Company name" required></div>
-      <div><label>Contact name</label><input type="text" placeholder="Full name" required></div>
-      <div><label>Email</label><input type="email" placeholder="you@company.com" required></div>
-      <div>
-        <label>Target region</label>
-        <select><option>Middle East &amp; Africa</option><option>Europe</option><option>Southeast Asia</option><option>Other</option></select>
-      </div>
-      <div>
-        <label>Product interest</label>
-        <select><option>Cylindrical LFP cells</option><option>EV / e-motorcycle packs</option><option>ESS modules</option><option>Telecom / microgrid backup</option></select>
-      </div>
-      <div><label>Estimated annual volume</label><input type="text" placeholder="e.g. 5,000 units / 2 MWh"></div>
-      <div class="full"><label>Details</label><textarea placeholder="Format, capacity, timeline, target certification requirements..."></textarea></div>
-      <button class="rfq-submit" type="submit">Send quote request</button>
-    </form>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <div class="nav-logo" style="margin-bottom:14px;">
-          <img src="http://www.dfdxny.com/images/logo1.png" alt="DFD New Energy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <span class="mark" style="display:none;"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 11-13h-7l1-7z"/></svg></span>
-          DFD New Energy
-        </div>
-        <p style="max-width:280px;">Cylindrical &amp; prismatic LFP cells, EV/e-motorcycle packs, and ESS systems. Part of Do-Fluoride Chemicals Group (SZ002407). Jiaozuo, Henan, China.</p>
-        <div style="margin-top:14px; font-size:0.82rem; color:var(--ink-muted); line-height:1.9;">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="brand"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h7l-1 8 11-13h-7l1-7z"/></svg></span> DFD New Energy</div>
+        <p>Large-format cylindrical &amp; prismatic LFP cells, EV/e-mobility packs, and energy-storage systems. A Do-Fluoride Chemicals Group company (Shenzhen: SZ002407). Jiaozuo, Henan · Nanning, Guangxi.</p>
+        <div class="foot-contact">
           <div>+86-0391-2956003</div>
           <div>xnysales@dfdchem.com</div>
-          <div style="display:flex; align-items:center; gap:6px; margin-top:2px;"><i data-lucide="message-circle" style="width:13px;height:13px;"></i> WhatsApp inquiries available</div>
-        </div>
-        <div class="lang-strip" style="margin-top:16px;">
-          <span class="active">EN</span><span>AR</span><span>DE</span><span>VI</span>
+          <div style="display:flex;align-items:center;gap:6px;margin-top:2px;"><i data-lucide="message-circle" style="width:14px;height:14px;"></i> WhatsApp inquiries welcome</div>
         </div>
       </div>
       <div>
         <h5>Products</h5>
-        <a href="#products">Cylindrical LFP Cells</a>
-        <a href="#products">EV &amp; E-Moto Packs</a>
-        <a href="#products">ESS Modules</a>
-        <a href="#products">Telecom Backup</a>
-      </div>
-      <div>
-        <h5>Regions</h5>
-        <a href="#regions">Middle East &amp; Africa</a>
-        <a href="#regions">Europe</a>
-        <a href="#regions">Southeast Asia</a>
+        <a href="products.html">Cylindrical LFP Cells</a>
+        <a href="products.html">EV &amp; E-Mobility Packs</a>
+        <a href="products.html">Energy Storage Systems</a>
+        <a href="products.html">Telecom &amp; Microgrid</a>
       </div>
       <div>
         <h5>Company</h5>
-        <a href="#compliance">Compliance</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Request a Quote</a>
+        <a href="company.html">About DFD</a>
+        <a href="company.html">Certifications</a>
+        <a href="company.html">Non-China Origin</a>
+        <a href="industries.html">Industries</a>
+      </div>
+      <div>
+        <h5>Get started</h5>
+        <a href="contact.html">Request a quote</a>
+        <a href="contact.html">Book a factory audit</a>
+        <a href="contact.html">Download spec sheets</a>
+        <a href="https://dfdbattery.en.alibaba.com/" target="_blank" rel="noopener">Alibaba storefront</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>DFD New Energy Technology Co., Ltd — a Do-Fluoride Chemicals Group company</span>
-      <span>Prototype build — recommend a dedicated export/international inquiries line before launch</span>
+      <span>© 2026 DFD New Energy Technology Co., Ltd — a Do-Fluoride Chemicals Group company.</span>
+      <div class="lang"><span class="on">EN</span><span>AR</span><span>DE</span><span>VI</span></div>
     </div>
   </div>
 </footer>
 
-<script>
-lucide.createIcons();
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
-}, {passive:true});
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
-}, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+<script src="assets/app.js"></script>
 </body>
 </html>
