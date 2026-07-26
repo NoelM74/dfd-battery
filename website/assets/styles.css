@@ -303,6 +303,26 @@ em.hl-amber{font-style:normal;color:var(--amber-deep);}
 .cmp-item.no .mk{background:rgba(200,60,60,.12);color:#C83C3C;}
 .cmp-item.yes .mk{background:rgba(39,165,103,.18);color:#4FD48C;}
 .compare .col.them .cmp-item{color:var(--text-muted);}
+/* three-way comparison: tier-1 gigafactory / reseller / DFD direct */
+.compare.three{grid-template-columns:1fr 1fr 1.18fr;}
+.compare.three .col+.col{border-left:1px solid var(--line);}
+.compare.three .col.us{border-left:none;}
+.compare .col .fit{display:inline-block;font-size:.72rem;font-weight:600;text-transform:uppercase;
+  letter-spacing:.07em;padding:5px 11px;border-radius:100px;margin-bottom:14px;
+  background:rgba(15,27,38,.07);color:var(--text-muted);}
+.compare .col.us .fit{background:rgba(90,176,255,.18);color:var(--blue-glow);}
+.cmp-verdict{max-width:760px;margin:32px auto 0;text-align:center;padding:26px 30px;
+  background:#fff;border:1px solid var(--line);border-left:3px solid var(--amber);
+  border-radius:var(--r-lg);box-shadow:var(--sh-sm);}
+.cmp-verdict p{font-family:'Space Grotesk';font-size:clamp(1.05rem,2.1vw,1.34rem);line-height:1.45;
+  font-weight:500;color:var(--navy);margin:0;}
+.cmp-verdict .who{display:block;margin-top:12px;font-family:'Inter';font-size:.84rem;
+  font-weight:500;color:var(--text-faint);}
+@media(max-width:940px){
+  .compare.three{grid-template-columns:1fr;}
+  .compare.three .col+.col{border-left:none;border-top:1px solid var(--line);}
+  .cmp-verdict{padding:22px 20px;text-align:left;}
+}
 
 /* ---------- feature split ---------- */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
