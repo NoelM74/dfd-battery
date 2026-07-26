@@ -173,6 +173,57 @@ Alt: "EU Battery Passport digital-traceability concept for DFD cells."
 
 **Workflow:** generate at the largest size ChatGPT offers, export, compress to AVIF/WebP, and drop into `website/assets/img/` using the descriptive file name in each alt line. In `industries.html`, swap the `<div class="split-media media-ph ...">` placeholder back to `<div class="split-media ..."><img src="assets/img/FILENAME" alt="ALT"></div>`.
 
+## 2c. High-res replacements for the low-quality original photos (gpt-image-1 / Nano Banana)
+
+The originals scraped from dfdxny.com are low-resolution. These replace them with one cohesive cinematic set. **Shared art direction (put this line in every prompt):** *cinematic studio product photography, deep navy background #07121D to #0B2136, a single electric-blue #3B9EFF rim/edge light, matte surfaces, shallow depth of field, subtle volumetric haze, photorealistic, no text, no logos.* The HTML is already pre-wired to these filenames with a fallback to the current image, so uploading each `.webp` upgrades the slot with no code change.
+
+### R1 — Hero cell (index.html full-bleed hero, 16:9) → `dfd-large-format-cylindrical-lfp-cell-hero.webp`
+> IMPORTANT: compose the cell on the **LEFT third** of the frame with the right two-thirds empty dark space — the site mirrors the hero, so it will appear on the right beside the headline.
+```
+A single large-format cylindrical LiFePO4 battery cell standing upright, positioned in the
+LEFT third of a wide frame. Deep gunmetal-blue anodized metal casing with a crisp specular
+highlight running down one edge and a glowing electric-blue (#3B9EFF) ring of light around
+the base. The right two-thirds of the frame is empty dark navy tech environment (#07121D to
+#0B2136) with faint horizontal light streaks and a subtle grid. Cinematic studio product
+photography, single electric-blue rim light, matte surface, shallow depth of field, subtle
+volumetric haze, photorealistic, 16:9, no text, no logos.
+```
+Title: `DFD Large-Format Cylindrical LiFePO4 Power Cell` · Alt: `DFD large-format cylindrical LiFePO4 automotive power cell on a dark tech background`
+
+### R2 — Cell series lineup (index bento + products.html cells, 4:3) → `dfd-cylindrical-lfp-cell-series-lineup.webp`
+```
+Three large-format cylindrical LiFePO4 battery cells of increasing size (40/42, 46 and 60/65
+formats) standing in a row, gunmetal-blue anodized casings with electric-blue (#3B9EFF) edge
+highlights and glowing base rings, arranged in a shallow arc. Reflective dark floor. Deep
+navy background (#07121D to #0B2136) with soft volumetric haze. Cinematic studio product
+photography, single electric-blue rim light, matte surfaces, shallow depth of field,
+photorealistic, 4:3, no text, no logos.
+```
+Title: `DFD Cylindrical LFP Cell Series — 40/42, 46, 60/65` · Alt: `DFD cylindrical LiFePO4 cell series lineup — 40/42, 46 and 60/65 formats`
+
+### R3 — EV battery module (industries.html EV OEM, 4:3) → `dfd-ev-lithium-battery-module.webp`
+```
+A modern EV lithium battery module built from large-format cylindrical cells: a precise
+rectangular module showing rows of cylindrical cell tops with busbar interconnects and a
+matte-black housing, electric-blue (#3B9EFF) accent light along one edge, three-quarter
+angle. Faint out-of-focus silhouette of a passenger EV chassis in the deep background. Deep
+navy environment (#07121D to #0B2136). Cinematic studio product photography, single
+electric-blue rim light, shallow depth of field, subtle haze, photorealistic, 4:3, no text,
+no logos.
+```
+Title: `DFD EV Lithium Battery Module for Automotive OEMs` · Alt: `DFD EV lithium battery module built on cylindrical LFP cells for automotive OEMs`
+
+### R4 — Production line (index.html non-China-origin, 4:3) → `dfd-battery-cell-production-line.webp`
+```
+A clean modern battery-cell production line viewed down its length: precise automated
+machinery and a robotic pick-and-place arm handling cylindrical cells, spotless dark epoxy
+floor, cool daylight machinery accented with electric-blue (#3B9EFF) indicator lighting.
+Conveys scale, cleanliness and quality control. Colour graded toward deep navy (#0B2136) so
+it blends into a dark website section. Cinematic industrial photography, shallow depth of
+field, subtle haze, photorealistic, 4:3, NO play button, no text, no logos.
+```
+Title: `DFD Automated Battery Cell Production Line` · Alt: `DFD automated cylindrical cell production line — quality-controlled manufacturing`
+
 ## 3. Iconography & diagrams
 - Keep line-icon set consistent (the prototype uses Lucide). Weight 1.5–2px, colour `#0380D6` on `#E7F2FA` chips.
 - The hero cell SVG in the prototype is a good lightweight placeholder; replace with prompt 2.1 render + prompt 2.5 cutaway for production.
