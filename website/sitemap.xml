@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>/products.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>/industries.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>/company.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>/contact.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>/index.html</loc><xhtml:link rel="alternate" hreflang="en" href="/index.html"/><xhtml:link rel="alternate" hreflang="ar" href="/ar/index.html"/><priority>1.0</priority></url>
+  <url><loc>/products.html</loc><xhtml:link rel="alternate" hreflang="en" href="/products.html"/><xhtml:link rel="alternate" hreflang="ar" href="/ar/products.html"/><priority>0.9</priority></url>
+  <url><loc>/industries.html</loc><xhtml:link rel="alternate" hreflang="en" href="/industries.html"/><xhtml:link rel="alternate" hreflang="ar" href="/ar/industries.html"/><priority>0.9</priority></url>
+  <url><loc>/company.html</loc><xhtml:link rel="alternate" hreflang="en" href="/company.html"/><xhtml:link rel="alternate" hreflang="ar" href="/ar/company.html"/><priority>0.8</priority></url>
+  <url><loc>/contact.html</loc><xhtml:link rel="alternate" hreflang="en" href="/contact.html"/><xhtml:link rel="alternate" hreflang="ar" href="/ar/contact.html"/><priority>0.9</priority></url>
+  <url><loc>/ar/index.html</loc><priority>1.0</priority></url>
+  <url><loc>/ar/products.html</loc><priority>0.9</priority></url>
+  <url><loc>/ar/industries.html</loc><priority>0.9</priority></url>
+  <url><loc>/ar/company.html</loc><priority>0.8</priority></url>
+  <url><loc>/ar/contact.html</loc><priority>0.9</priority></url>
 </urlset>
