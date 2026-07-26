@@ -243,3 +243,39 @@ Note the pattern: **everything good on this site is specific and everything weak
 ## Note on the translations
 
 The AR and ES pages were translated from this source, so they inherit every fault above — including the antithesis tic, which lands differently in each language. Arabic rhetorical tradition tolerates parallel antithesis far better than English does, so #1.1 is a *smaller* problem in `ar/`. Latin American Spanish business register is generally warmer and less clipped than this copy, so the punchy fragments ("Buy from the factory. Verify everything.") may read as brusque rather than confident in `es/`. Both deserve a native pass on register, not just a re-translation of corrected strings.
+
+---
+
+# Execution record
+
+All four tiers applied across all 15 pages (EN, AR, ES). Final measurements:
+
+| Metric | Before | After |
+|---|---|---|
+| Em-dashes | 57 (1 per 59 words) | 11 (1 per 325 words) |
+| Antithesis "X, not Y" | 15 | 4 (deliberate keepers) |
+| you:we ratio | 0.76:1 | 2.03:1 |
+| "The problem:" labels | 3 | 0 |
+| "underway" | 5 | 0 |
+| Four-hour SLA repeats | 4 | 1 |
+| US/UK spelling clashes | 6 | 0 |
+| Unqualified cycle-life claims | 8 | 0 |
+| Factual faults | 6 | 0 |
+
+### Positioning frames used
+- **April Dunford** — position against the competitive alternative the buyer is actually weighing.
+- **Challenger reframe** — teach the buyer something about their own risk (*"Project finance tests whether your warranty provider will still exist in year ten."*).
+- **Bob Bly's technical-B2B rule** — every adjective becomes a number or a mechanism.
+
+### Deliberate exceptions
+- **`company.html` sits at 1.11:1 you:we**, below the 1.5:1 target. It is a dossier page whose subject is the company; forcing second person into it would read as artificial. Improved from 0.60:1 rather than forced.
+- **`products.html` spec table retains "4,000+"** — the column header now reads *Cycle life to 70% SOH* with the GB/T 31484 footnote below, so the `+` correctly signals a tested minimum.
+- **Three "roughly" hedges retained** on the one-in-four electrolyte-salt claim. That is the honest word for the statistic.
+
+### Still requires client input
+1. **Cycle-life test conditions.** GB/T 31484-2015 is now cited (true — it is on the certification list). Adding explicit C-rate, depth of discharge and ambient temperature would be stronger still, but those figures must come from the real datasheet. They were not invented.
+2. **"Ask about MEA supply" / "Ask about SEA supply"** replaced "Talk to our MEA/SEA desk" to avoid promising regional desks that may not exist. Restore the stronger wording if the desks are real.
+3. **KORE Power / Hyundai / LG Chem** now sit under "Working with" and are described as *"cell, pack and materials programmes."* Confirm the precise commercial relationship and tighten further.
+4. **Ten-year warranty term** replaced the "10–15 year" range throughout. Confirm the actual warranty period offered.
+5. **EU Battery Passport** is now stated as *"Required from 2027"* rather than "readiness underway." Confirm the internal target date.
+6. **Arabic and Spanish still warrant a native-speaker proofread** before launch, particularly the newly rewritten strings.
