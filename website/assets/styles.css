@@ -120,21 +120,14 @@ em.hl-amber{font-style:normal;color:var(--amber-deep);}
 .nav.scrolled{background:rgba(251,252,253,.82);backdrop-filter:blur(20px) saturate(1.4);
   -webkit-backdrop-filter:blur(20px) saturate(1.4);border-color:var(--line);box-shadow:var(--sh-sm);}
 .nav.on-dark-nav:not(.scrolled){color:var(--on-dark);}
-.brand{display:flex;flex-direction:column;justify-content:center;gap:1px;min-width:0;}
-.brand .bw{font-family:'Space Grotesk','Inter',sans-serif;font-weight:600;font-size:1.04rem;
-  letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;color:var(--navy);line-height:1.15;}
-.brand .bw b{font-weight:700;letter-spacing:.02em;}
-.brand .bw i{font-style:normal;color:var(--blue-text);}
-.on-dark-nav:not(.scrolled) .brand .bw{color:#fff;}
-.on-dark-nav:not(.scrolled) .brand .bw i{color:var(--blue-glow);}
-.foot-brand .brand .bw{color:#fff;}
-.foot-brand .brand .bw i{color:var(--blue-glow);}
-.brand .logo-mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--blue-bright),var(--navy));
-  display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-sm);flex-shrink:0;}
-.brand .logo-mark svg{width:23px;height:23px;color:#fff;}
-.brand .sub{font-weight:500;font-size:.66rem;letter-spacing:.03em;color:var(--text-faint);display:block;white-space:nowrap;}
-@media(max-width:520px){.brand .sub{display:none;}.brand .bw{font-size:.96rem;}}
-.on-dark-nav:not(.scrolled) .brand .sub{color:var(--on-dark-faint);}
+.brand{display:flex;align-items:center;min-width:0;flex-shrink:1;}
+.brand-logo{height:46px;width:auto;display:block;outline:none;border-radius:0;transition:opacity .25s var(--ease);}
+.brand-logo.on-light{display:none;}
+.nav.scrolled .brand-logo.on-dark-only{display:none;}
+.nav.scrolled .brand-logo.on-light{display:block;}
+@media(max-width:940px){.brand-logo{height:40px;}}
+@media(max-width:420px){.brand-logo{height:34px;}}
+.foot-logo{width:118px;height:auto;display:block;margin-bottom:16px;outline:none;}
 .nav-links{display:flex;align-items:center;gap:6px;}
 .nav-links a{font-size:.92rem;font-weight:500;color:inherit;opacity:.82;padding:9px 14px;border-radius:8px;
   transition:opacity .2s,background-color .2s;}
