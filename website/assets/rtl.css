@@ -48,13 +48,14 @@ html[dir="rtl"] .hero{
 }
 html[dir="rtl"] .hero::after{mask-image:radial-gradient(900px 600px at 30% 10%,#000,transparent 75%);}
 /* source art has the cell on the left; Arabic copy sits right, so do NOT mirror */
-html[dir="rtl"] .hero-bg img{transform:none;object-position:left center;}
+html[dir="rtl"] .hero-bg img{transform:none;object-position:center center;}
 @media(max-width:960px){html[dir="rtl"] .hero-bg img{object-position:30% center;}}
 html[dir="rtl"] .hero-scrim{
-  background:linear-gradient(270deg,#07121D 0%,rgba(7,18,29,.97) 40%,rgba(7,18,29,.86) 60%,rgba(7,18,29,.45) 84%,rgba(7,18,29,.18) 100%),
+  background:linear-gradient(270deg,#07121D 0%,rgba(7,18,29,.96) 34%,rgba(7,18,29,.74) 52%,rgba(7,18,29,.30) 72%,rgba(7,18,29,.06) 100%),
              linear-gradient(0deg,#0A1826 0%,transparent 46%);
 }
 html[dir="rtl"] .hero-inner.solo .hero-copy{margin-right:0;margin-left:auto;}
+html[dir="rtl"] .hero-copy{margin-right:0;}
 
 /* ---------- page heroes ---------- */
 html[dir="rtl"] .page-hero::after,
