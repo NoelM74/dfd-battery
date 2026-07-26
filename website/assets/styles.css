@@ -19,8 +19,8 @@
   --text-muted:#556677;
   --text-faint:#616F7E;
   --on-dark:#EAF2F9;
-  --on-dark-muted:#9FB6CA;
-  --on-dark-faint:#6E869B;
+  --on-dark-muted:#AEC4D6;
+  --on-dark-faint:#8AA3B8;
 
   /* brand accents */
   --blue:#1E7FE0;
@@ -168,8 +168,8 @@ em.hl-amber{font-style:normal;color:var(--amber-deep);}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:right center;transform:scaleX(-1);outline:none;border-radius:0;}
 @media(max-width:960px){.hero-bg img{object-position:70% center;opacity:.55;}}
 .hero-scrim{position:absolute;inset:0;z-index:1;
-  background:linear-gradient(90deg,#07121D 0%,rgba(7,18,29,.95) 32%,rgba(7,18,29,.62) 58%,rgba(7,18,29,.20) 100%),
-             linear-gradient(0deg,#0A1826 0%,transparent 42%);}
+  background:linear-gradient(90deg,#07121D 0%,rgba(7,18,29,.97) 40%,rgba(7,18,29,.86) 60%,rgba(7,18,29,.45) 84%,rgba(7,18,29,.18) 100%),
+             linear-gradient(0deg,#0A1826 0%,transparent 46%);}
 .hero-spec-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;}
 .hero-spec{background:rgba(9,20,32,.55);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.14);
   border-radius:12px;padding:11px 15px;}
