@@ -123,7 +123,7 @@ em.hl-amber{font-style:normal;color:var(--amber-deep);}
 .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:1.06rem;letter-spacing:-.02em;}
 .brand .logo-mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--blue-bright),var(--navy));
   display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-sm);flex-shrink:0;}
-.brand .logo-mark svg{width:19px;height:19px;color:#fff;}
+.brand .logo-mark svg{width:23px;height:23px;color:#fff;}
 .brand .sub{font-weight:500;font-size:.7rem;letter-spacing:.02em;color:var(--text-faint);display:block;margin-top:-3px;}
 .on-dark-nav:not(.scrolled) .brand .sub{color:var(--on-dark-faint);}
 .nav-links{display:flex;align-items:center;gap:6px;}
@@ -427,3 +427,12 @@ footer{background:var(--ink);color:var(--on-dark-muted);padding:72px 0 34px;}
 .langlist a.on{color:var(--blue-text);font-weight:700;}
 .langlist a .code{font-size:.72rem;color:var(--text-faint);font-weight:600;}
 @media(max-width:940px){.langswitch .lbl{display:none;}.langswitch{padding:9px 11px;}}
+
+/* ---------- spec / data tables ---------- */
+.spec-table{width:100%;border-collapse:collapse;font-size:.92rem;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-sm);}
+.spec-table th,.spec-table td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top;}
+.spec-table thead th{background:var(--paper-2);font-size:.76rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);font-weight:700;}
+.spec-table tbody tr:last-child td{border-bottom:none;}
+.spec-table td:first-child{font-weight:600;color:var(--navy);}
+.spec-table .mono{font-variant-numeric:tabular-nums;color:var(--text-muted);}
+.spec-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--r-lg);}
